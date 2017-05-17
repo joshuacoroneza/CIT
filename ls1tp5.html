@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a href="ls1tp1.html">HISTORY&nbsp;OF&nbsp;C</a>
+                    </li>
+                    <li>
+                        <a href="ls1tp2.html">PREPROCESSOR</a>
+                    </li>
+                    <li>
+                        <a href="ls1tp3.html">C&nbsp;AS&nbsp;COMPILER</a>
+                    </li>
+                     <li>
+                        <a href="ls1tp4.html">ASEMBLER</a>
+                    </li>
+                     <li>
+                        <a href="ls1tp6.html">THE&nbsp;HEADER</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+            <h1 align="center">COMPIER&nbsp;VS&nbsp;INTERPRETER</h1>
+        <hr>
+
+    <ul>
+
+<b><p>Compilers Versus Interpreter   </p></b>
+The terms compiler and interpreter refer to the way in which a program is executed. In theory, any programing language can be either compiled or interpreted, but some languages are usually executed one way or the other. For example, BASIC is usually interpreted and C is usually complied.( C interpreters have some value as debugging aids.) The way a program is executed is not defined by the language in which it is written. Interpreters and compilers are simply sophisticated programs that operate on your program source code.
+	An interpreter reads the source code of your program one line at a time and performs the specific instructions contained in that line. A compiler reads the entire program and converts it into object code, which is a translation of the program source code into a form that can be directly executed by the computer. Object code is also called binary code and machine code. Once a program is compiled, a line of source code is no longer meaningful in the execution of the program.
+	When you use an interpreter it must be present each time you wish to run your program. For example, in BASIC you have to execute the BASIC interpreter first and then load your program and type RUN each time you want to use it. The BASIC interpreter then examines your program one line at a time for correctness and then executes it. This slow process occurs every time the program runs. By contrast, a compiler converts your program into object   code that can be directly executed by your computer. Because the complier translates your program only once, all you need to do is execute your program directly, usually by the simple process of typing its name. Thus, compilation is one-time cost, while interpreter code incurs an overhead cost each time a program runs.
+	Two terms that you will often see this BOOK and your C compiler manual are compile time, which refers to the events that occur during the compilation process, and run time, which refers to the events that occur while the program is actually executing. You usually see these terms in discussions of errors, as in the phrases ''Complie-time errore'' and ''run-time errors''.
+
+  <p>  <strong>Compiler vs. Interpreter</strong></p>
+<table border="1" cellspacing="0" cellpadding="0" width="318">
+  <tr>
+    <td width="136" valign="top"><br>
+      <strong>Compiler</strong></td>
+    <td width="176" valign="top"><p align="center"><strong>Interpreter</strong></p></td>
+  </tr>
+  <tr>
+    <td width="136" valign="top"><p>Compiler takes <strong>Entire </strong>program as input.</p></td>
+    <td width="176" valign="top"><p>Interpreter    takes <strong>Single </strong>instruction as input.</p></td>
+  </tr>
+  <tr>
+    <td width="136" valign="top"><p>Intermediate    Object Code is <strong>Generated.</strong></p></td>
+    <td width="176" valign="top"><p><strong>No </strong>Intermediate    Object Code is <strong>Generated.</strong></p></td>
+  </tr>
+  <tr>
+    <td width="136" valign="top"><p>Conditional    Control Statements are Executes <strong>faster.</strong></p></td>
+    <td width="176" valign="top"><p>Conditional    Control Statements are Executes <strong>slower.</strong></p></td>
+  </tr>
+  <tr>
+    <td width="136" valign="top"><p><strong>Memory Requirement : More </strong>( Since Object Code is Generated)</p></td>
+    <td width="176" valign="top"><p><strong>Memory    Requirement </strong>is <strong>Less</strong></p></td>
+  </tr>
+  <tr>
+    <td width="136" valign="top"><p>Program need    not be <strong>compiled </strong>every time.</p></td>
+    <td width="176" valign="top"><p>Every time    higher level program is converted into lower level program.</p></td>
+  </tr>
+  <tr>
+    <td width="136" valign="top"><p><strong>Errors </strong>are displayed after <strong>entire program</strong> is checked.</p></td>
+    <td width="176" valign="top"><p><strong>Errors </strong>are displayed for <strong>every instruction</strong> interpreted (if any)</p></td>
+  </tr>
+</table>
+<p><strong>Compiler vs.  Interpreter</strong><br>
+Just understand the concept of the compiler and  interpreter  </p>
+<ul>
+  <li>We give complete  program as input to the compiler. Our program in the human readable format.</li>
+  <li>Human readable  format undergoes many passes and phases of compiler and finally it is converted  into the machine readable format.</li>
+  <li>However  interpreter takes single line of code as input at a time and executes that  line. It will terminate the execution of the code as soon as it finds the  error.</li>
+  <li>Memory  requirement is less in Case of interpreter because no object code is created in  case of interpreter. </li>
+</ul>
+
+
+
+    </ul>
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <a href="ls1.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a> <br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

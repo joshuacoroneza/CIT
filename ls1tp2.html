@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a href="ls1tp1.html">Hisory of C</a>
+                    </li>
+
+                    <li>
+                        <a href="ls1tp3.html">C&nbsp;AS&nbsp;COMPILER</a>
+                    </li>
+                     <li>
+                        <a href="ls1tp4.html">PREPROCESSOR</a>
+                    </li>
+                     <li>
+                        <a href="ls1tp5.html">COMPIER&nbsp;VS&nbsp;INTERPRETER</a>
+                    </li>
+                     <li>
+                        <a href="ls1tp6.html">THE&nbsp;HEADER</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+                    <h1 align="center">PREPROCESSOR</h1>
+        <hr>
+
+
+        <ul>
+
+
+
+
+<li>The preprocessor is the first step of the compilation
+process. </li>
+<li>It prepares the source files for the compiler. </li>
+<li>The preprocessor is responsible for . . .    </li>
+<li>Removing all the comments from the source files.</li>
+<li>Executing the preprocessor directives (#define and #include).</li> <br /><br />
+
+
+
+
+The <strong>C Preprocessor </strong>is not a part  of the compiler, but is a separate step in the compilation process. In simple  terms, a C Preprocessor is just a text substitution tool and it instructs the  compiler to do require pre-processing before the actual compilation. We'll  refer to the C Preprocessor as CPP. <br>
+All preprocessor commands begin with a hash symbol (#). It must be  the first non-blank character, and for readability, a preprocessor directive  should begin in the first column. The following section lists down all the  important preprocessor directives:</p>
+<table border="1" cellspacing="0" cellpadding="0" width="443">
+  <tr>
+    <td width="130" valign="top"><br>
+      <strong>Directive </strong></td>
+    <td width="307" valign="top"><p><strong>Description </strong></p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#define </p></td>
+    <td width="307" valign="top"><p>Substitutes a preprocessor macro. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#include </p></td>
+    <td width="307" valign="top"><p>Inserts a particular header from another file. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#undef</p></td>
+    <td width="307" valign="top"><p>Undefines a preprocessor macro. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#ifdef</p></td>
+    <td width="307" valign="top"><p>Returns true if this macro is defined. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#ifndef</p></td>
+    <td width="307" valign="top"><p>Returns true if this macro is not defined. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#if </p></td>
+    <td width="307" valign="top"><p>Tests if a compile time condition is true. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#else </p></td>
+    <td width="307" valign="top"><p>The alternative for #if. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#elif</p></td>
+    <td width="307" valign="top"><p>#else and #if in one statement. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#endif</p></td>
+    <td width="307" valign="top"><p>Ends preprocessor conditional. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#error </p></td>
+    <td width="307" valign="top"><p>Prints error message on stderr. </p></td>
+  </tr>
+  <tr>
+    <td width="130" valign="top"><p>#pragma </p></td>
+    <td width="307" valign="top"><p>Issues special commands to the compiler, using a standardized    method</p></td>
+  </tr>
+</table>
+
+
+
+
+
+
+</ul>
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls1.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                       <!-- Pagination -->
+
+
+
+
+
+
+
+
+
+
+
+                 <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:  http://www.tutorialspoint.com/cprogramming/pdf/c_preprocessors.pdf</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+
+            </div></div>
+            <p align="center" style="line-height:50px;color:white">
+</p>
+
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+
+
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

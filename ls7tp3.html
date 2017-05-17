@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+<h2><p><strong>Functions</strong><br></h2>
+  <strong>          </strong>&nbsp;C functions are  basic building blocks in a program. All C programs are written using functions  to improve re-usability, understandability and to keep track on them.&nbsp;</p>
+<ul>
+  <ul>
+    <li><strong>What is C function?</strong></li>
+  </ul>
+</ul>
+<p>&nbsp; &nbsp; &nbsp;A large C program is divided into basic building  blocks called C function. C function contains set of instructions enclosed by  &ldquo;{ &nbsp;}&rdquo; which performs specific operation in a C program. Actually, Collection  of these functions creates a C program.</p>
+<ul>
+  <ul>
+    <li><strong> Uses of C  functions:</strong></li>
+  </ul>
+</ul>
+<ul type="disc">
+  <li>C       functions are used to avoid rewriting same logic/code again and again in a       program.</li>
+  <li>There       is no limit in calling C functions to make use of same functionality       wherever required.</li>
+  <li>We       can call functions any number of times in a program and from any place in       a program.</li>
+  <li>A       large C program can easily be tracked when it is divided into functions.</li>
+  <li>The       core concept of C functions are, re-usability, dividing a big task into       small pieces to achieve the functionality and to improve understandability       of very large C programs.</li>
+</ul>
+<ul>
+  <ul>
+    <li><strong> C&nbsp;function declaration, function call and  function definition:</strong></li>
+  </ul>
+</ul>
+<p>There are 3 aspects  in each C function. They are,</p>
+<ul type="disc">
+  <li>Function declaration or       prototype &nbsp;– This&nbsp;informs compiler about the function name,       function parameters and &nbsp;return value&rsquo;s data type.</li>
+  <li>Function call – This calls       the actual function</li>
+  <li>Function definition – This       contains all the statements to be executed.</li>
+</ul>
+<ul>
+  <ul>
+    <li><strong>How to call C functions in a program?</strong></li>
+  </ul>
+</ul>
+<p>There are two ways  that a C function can be called from a program. They are,</p>
+<ol start="1" type="1">
+  <li>Call by value</li>
+  <li>Call by reference</li>
+</ol>
+<p><strong>1. Call by value:</strong></p>
+<ul type="disc">
+  <li>In call by value method, the       value of the variable is passed to the function as parameter.</li>
+  <li>The value of the actual       parameter cannot be modified by formal parameter.</li>
+  <li>Different Memory is       allocated for both actual and formal parameters. Because, value of actual       parameter is copied to formal parameter.</li>
+</ul>
+<p>Note:</p>
+<ul type="disc">
+  <li>Actual parameter – This is       the argument which is used in function call.</li>
+  <li>Formal parameter – This is       the argument which is used in function definition</li>
+</ul>
+<p><strong>Example program for C function (using call by  value):</strong></p>
+<ul type="disc">
+  <li>In this program, the values       of the variables &ldquo;m&rdquo; and &ldquo;n&rdquo; are passed to the function &ldquo;swap&rdquo;.</li>
+  <li>These values are copied to       formal parameters &ldquo;a&rdquo; and &ldquo;b&rdquo; in swap function and used.</li>
+</ul>
+<p><strong><img width="368" height="420" src="images/f9.png"></strong><strong> </strong></p>
+<br />
+<table border="1" cellpadding="0">
+  <tr>
+    <td valign="top"><br>
+      values before swap    m = 22<br>
+      and n = 44<br>
+      values after swap m = 44<br>
+      and n = 22 </td>
+  </tr>
+</table>
+<p><strong>Output:</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>2. Call by reference:</strong></p>
+<ul type="disc">
+  <li>In call by reference method,       the address of the variable is passed to the function as parameter.</li>
+  <li>The value of the actual       parameter can be modified by formal parameter.</li>
+  <li>Same memory is used for both       actual and formal parameters since only address is used by both       parameters.</li>
+</ul>
+<p><strong>Example program for C function (using call by  reference):</strong></p>
+<ul type="disc">
+  <li>In this program, the address       of the variables &ldquo;m&rdquo; and &ldquo;n&rdquo; are passed to the function &ldquo;swap&rdquo;.</li>
+  <li>These values are not copied       to formal parameters &ldquo;a&rdquo; and &ldquo;b&rdquo; in swap function.</li>
+  <li>Because, they are just       holding the address of those variables.</li>
+  <li>This address is used to       access and change the values of the variables.</li>
+</ul>
+<p><img width="368" height="420" src="images/f9.png"></p>
+<p>A function definition in C programming consists of a <em>function  header </em>and a <em>function body</em>. Here are all the parts of a function: </p>
+<ul>
+  <li><strong>Return Type</strong>: A function may return a value. The <strong>return_type</strong>is the data  type of the value the function returns. Some functions perform the desired  operations without returning a value. In this case, the return_type is the  keyword <strong>void</strong>. </li>
+  <li><strong>Function Name: </strong>This is the actual name of the function. The function name and the  parameter list together constitute the function signature. </li>
+  <li><strong>Parameters: </strong>A parameter is like a placeholder. When a function is invoked, you  pass a value to the parameter. This value is referred to as actual parameter or  argument. The parameter list refers to the type, order, and number of the  parameters of a function. Parameters are optional; that is, a function may  contain no parameters. </li>
+  <li><strong>Function Body: </strong>The function body contains a collection of statements that define  what the function does. </li>
+</ul>
+<p><strong>Example </strong> <br>
+  Given below is the source code for a function called <strong>max()</strong>.  This function takes two parameters num1 and num2 and returns the maximum value  between the two:</p>
+<div>
+  <p>/* function returning the max between two numbers */ <br>
+    int max(int num1, int      num2) <br>
+    { <br>
+    /* local variable      declaration */ <br>
+    int result; <br>
+    if (num1 &gt; num2) <br>
+    result = num1; <br>
+    else<br>
+    result = num2; <br>
+    return result; <br>
+    } </p>
+</div>
+<p><strong>Function Declarations</strong> <br>
+  A function <strong>declaration </strong>tells the compiler about a function name and how to call the function. The  actual body of the function can be defined separately. <br>
+<div>
+  <p>return_typefunction_name(      parameter list ); </p>
+</div>
+&nbsp;A function  declaration has the following parts:
+<div>
+  <p>int max(int num1,      int num2); </p>
+</div>
+&nbsp;For the  above defined function max(),the function declaration is as follows:
+<div>
+  <p>int max(int, int); </p>
+</div>
+&nbsp;Parameter  names are not important in function declaration, only their type is required,  so the following is also a valid declaration:
+</p>
+<p>Function declaration is required when  you define a function in one source file and you call that function in another  file. In such case, you should declare the function at the top of the file  calling the function.</p>
+
+<br />
+<br />
+
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+
+        <!-- /.row -->
+
+       <hr>
+	</div><!-- /.container -->
+
+        <!-- Footer -->
+
+
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+
+                        <a href="ls7tp1.html">array</a>
+                    </li>
+                    <li>
+                        <a href="ls7tp2.html">structure</a>
+                    </li>
+                    <li>
+                        <a href="ls7tp3.html">function</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls7.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+
+                   <center>    <p></p>        </center>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+
+                                                                  <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERNCE:&nbsp;https://www.tutorialspoint.com/cprogramming/cprogramming_tutorial.pdf</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <sc

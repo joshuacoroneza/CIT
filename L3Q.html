@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: #66FF99">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">LESSON 3 QUIZ</h1>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "a. pre and post increment";
+answers[1] = "c. Expression";
+answers[2] = "b. Value of a : 10,Value of b : 11";
+answers[3] = "a. a=6 b=11";
+answers[4] = "d. Only (i),(ii) and (iii) are correct declaration";
+answers[5] = "c. strcmp(s1, s2);";
+answers[6] = "c. 2 2 5";
+answers[7] = "b. 10";
+answers[8] = "d. All are correct declaration";
+answers[9] = "c. 8";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*10);
+  form.percentage.value = score;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+
+ <div>
+<form name="quiz">
+<b>
+1. What are the two types of increment operator?<br></b>
+<blockquote>
+<input type="radio" name="q1" value="a. Pre and Post Increment">a. Pre and Post Increment<br>
+<input type="radio" name="q1" value="b. Top and Down Increment">b. Top and Down Increment<br>
+<input type="radio" name="q1" value="c. Bottom and Up Increment">c. Bottom and Up Increment<br>
+<input type="radio" name="q1" value="d. Post">d. Pre<br>
+</blockquote>
+<p><b>
+2. Is a combination of operators (such as addition (+), subtraction (-), multiplication (*), division (/) and operands (variables or literal values), that can be evaluated to yield a single value of a certain type.<br></b>
+<blockquote>
+<input type="radio" name="q2" value="a. Operator">a. Operator<br>
+<input type="radio" name="q2" value="b. Character">b. Character<br>
+<input type="radio" name="q2" value="c. Expression ">c. Expression <br>
+<input type="radio" name="q2" value="d. Statements">d. Statements<br>
+</blockquote>
+</p><b>
+3. What is the output of this program:<br></b>
+<p> #include<stdio.h> </p>
+<p>void main()</p>
+<p>{</p>
+<p>int a,b,x=10,y=10;</p>
+
+<p>a = x++;</p>
+<p>b = ++y;</p>
+
+printf(''Value of a : %d'',a);  <br />
+printf(''Value of a : %d'',b);  <br />
+<p>}</p>
+
+<blockquote>
+<input type="radio" name="q3" value="a.Value of a : 10,Value of b : 10">a. Value of a : 10,Value of b : 10<br>
+<input type="radio" name="q3" value="b. Value of a : 10,Value of b : 11">b. Value of a : 10,Value of b : 11<br>
+<input type="radio" name="q3" value="c. Value of a : 0,Value of b : 1">c. Value of a : 0,Value of b : 1<br>
+<input type="radio" name="q3" value="d. Value of a : 10,Value of b : 12">d. Value of a : 10,Value of b : 12<br>
+</blockquote>
+<p><b>
+4. What is the output of this program<br></b> </p>
+main() <br />
+{      <br />
+int a=5,b; <br />
+b= ++a + 5; <br />
+printf( '' a=%db=%d '' ,a,b);<br /> <br />
+}           <br />
+
+<blockquote>
+<input type="radio" name="q4" value="a.a=6 b=11">a. a=6 b=11<br>
+<input type="radio" name="q4" value="b. a=6 ">b. a=6<br>
+<input type="radio" name="q4" value="c. 6 and 11">c. 6 and 11<br>
+<input type="radio" name="q4" value="d. a=11 b=6">d. a=11 b=6<br>
+</blockquote>
+<p><b>
+5. Consider on following declaring of enum.<br></b></p>
+<p>(i)        enum  cricket {Gambhir,Smith,Sehwag}c;</p>
+<p>(ii)      enum  cricket {Gambhir,Smith,Sehwag};</p>
+<p>(iii)    enum   {Gambhir,Smith=-5,Sehwag}c;</p>
+<p>(iv)      enum  c {Gambhir,Smith,Sehwag};</p>
+<p>Choose correct one:</p>
+<blockquote>
+<input type="radio" name="q5" value="a. Only (i) is correct declaration">a. Only (i) is correct declaration<br>
+<input type="radio" name="q5" value="b. Only (i) and (ii) is correct declaration">b. Only (i) and (ii) is correct declaration<br>
+<input type="radio" name="q5" value="c. Only (i) and (iii) are correct declaration	">c. Only (i) and (iii) are correct declaration	<br>
+<input type="radio" name="q5" value="d. Only (i),(ii) and (iii) are correct declaration">d. Only (i),(ii) and (iii) are correct declaration<br>
+</blockquote>
+<p><b>
+6. Returns a pointer to the first occurrence of character ch in string s1.<br></b></p>
+<blockquote>
+<input type="radio" name="q6" value="a. strcpy(s1, s2);">a. strcpy(s1, s2);<br>
+<input type="radio" name="q6" value="b. strchr(s1, ch);">b. strchr(s1, ch);<br>
+<input type="radio" name="q6" value="c. strcmp(s1, s2);">c. strcmp(s1, s2);<br>
+<input type="radio" name="q6" value="d. strstr(s1, s2);">d. strstr(s1, s2);<br>
+</blockquote>
+<p><b>
+7. What will be output when you will execute following c code?<br></b>  </p>
+<p>#include<stdio.h></p>
+<p>int main(){</p>
+  <p>  const int *p;</p>
+  <p>  int a=10;</p>
+  <p>  p=&a;	</p>
+  <p> printf("%d",*p);</p>
+  <p>  return 0;</p>
+<p>}</p>
+
+<p>Choose all that apply:</p>
+
+<blockquote>
+<input type="radio" name="q7" value="a. 4 2 7">a. 4 2 7<br>
+<input type="radio" name="q7" value="b. 4 4 5">b. 4 4 5<br>
+<input type="radio" name="q7" value="c. 2 2 5">c. 2 2 5<br>
+<input type="radio" name="q7" value="d. 2 4 7">d. 2 4 7<br>
+</blockquote>
+<p><b>
+8. What will be output when you will execute following c code?.<br></b> </p>
+<p>#include<stdio.h></p>
+<p>int main(){</p>
+<p>    const int *p;</p>
+<p>    int a=10;</p>
+<p>    p=&a;</p>
+<p>    printf("%d",*p);</p>
+ <p>   return 0;</p>
+<p>}</p>
+
+<p>Choose all that apply:</p>
+<blockquote>
+<input type="radio" name="q8" value="a. 0">a. 0<br>
+<input type="radio" name="q8" value="b. 10">b. 10<br>
+<input type="radio" name="q8" value="c. Garbage value">c. Garbage value<br>
+<input type="radio" name="q8" value="d. Any memory address">d. Any memory address<br>
+</blockquote>
+<p><b>
+9. Consider on following declaration:<br></b></p>
+<p>(i)        short i=10</p>
+<p>(ii)      static i=10;</p>
+<p>(iii)    unsigned i=10;</p>
+<p>(iv)      const i=10;</p>
+<p>Choose correct one:</p>
+<blockquote>
+<input type="radio" name="q9" value="a. Only (iv) is incorrect">a. Only (iv) is incorrect<br>
+<input type="radio" name="q9" value="b.Only (ii) and (iv) are incorrect">b. Only (ii) and (iv) are incorrect<br>
+<input type="radio" name="q9" value="c. Only (ii),(iii) and (iv) are correct">c. Only (ii),(iii) and (iv) are correct<br>
+<input type="radio" name="q9" value="d. All are correct declaration">d.All are correct declaration<br>
+</blockquote>
+<p><b>
+10. What will be output when you will execute following c code?<br></b></p>
+<p>#include<stdio.h></p>
+<p>int main(){</p>
+   <p> int a= sizeof(signed) +sizeof(unsigned);</p>
+    <p>int b=sizeof(const)+sizeof(volatile);</p>
+   <p> printf("%d",a+++b);</p>
+    <p>return 0;</p>
+}    <br />
+
+<p>Choose all that apply:</p>
+<blockquote>
+<input type="radio" name="q10" value="a. 10">a. 10<br>
+<input type="radio" name="q10" value="b. 9">b. 9<br>
+<input type="radio" name="q10" value="c. 8">c. 8<br>
+<input type="radio" name="q10" value="d. Error: Cannot find size of modifiers">d. Error: Cannot find size of modifiers<br>
+</blockquote>
+ <center> <p><font>
+<input type="button" value="Get score" onClick="getScore(this.form)" style="background-color: #00FF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="Clear" style="background-color: #FFCCFF"><br /><br />
+Score = <input type=text size=15 name="percentage"><br>
+
+</p>   </center>
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="lez.html" class="btn btn-success">BACK TO LESSON MENU</a>
+             </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+         </body>
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+   <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</html>

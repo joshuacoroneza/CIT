@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+<p><strong><h2>Format Specifiers</h2></strong><br>
+  <strong>            </strong>In C programming  we need lots of specifiers to work with various data types. Format specifiers  define the type of data to be printed on standard output. Whether to be printed  on standard output or to take formatted input we need format specifiers. Format  specifiers are also called as format string.<br>
+  Here is a  complete list of all format specifiers used in C programming language.</p>
+<table border="1" cellspacing="0" cellpadding="0" width="345">
+  <tr>
+    <td width="111" valign="top"><br>
+      <strong>Format Specifiers</strong></td>
+    <td width="151" valign="top"><p align="center"><strong>Description</strong></p></td>
+    <td width="75" valign="top"><p align="center"><strong>Supported Data Types</strong></p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">&nbsp;</p>
+      <p align="center">%c</p></td>
+    <td width="151" valign="top"><p>&nbsp;</p>
+      <p>Character</p></td>
+    <td width="75" valign="top"><p>char<br>
+      unsigned<br>
+      char</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">&nbsp;</p>
+      <p align="center">%d</p></td>
+    <td width="151" valign="top"><p>&nbsp;</p>
+      <p>Signed    integer</p></td>
+    <td width="75" valign="top"><p>short<br>
+      unsigned<br>
+      short<br>
+      int<br>
+      long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%e    or %E</p></td>
+    <td width="151" valign="top"><p>Scientific    notation of float values</p></td>
+    <td width="75" valign="top"><p>float<br>
+      double </p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%f</p></td>
+    <td width="151" valign="top"><p>Floating    point</p></td>
+    <td width="75" valign="top"><p>float</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%g    or %G</p></td>
+    <td width="151" valign="top"><p>Similar    as %e or %E</p></td>
+    <td width="75" valign="top"><p>float<br>
+      double</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%hi</p></td>
+    <td width="151" valign="top"><p>Signed    integer (Short)</p></td>
+    <td width="75" valign="top"><p>short</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%hu</p></td>
+    <td width="151" valign="top"><p>Unsigned    integer(Short)</p></td>
+    <td width="75" valign="top"><p>unsigned <br>
+      short</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%i</p></td>
+    <td width="151" valign="top"><p>Signed    integer</p></td>
+    <td width="75" valign="top"><p>short<br>
+      unsigned<br>
+      short<br>
+      int<br>
+      long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%l    or %ld or %li</p></td>
+    <td width="151" valign="top"><p>Signed    integer</p></td>
+    <td width="75" valign="top"><p>long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%lf</p></td>
+    <td width="151" valign="top"><p>Floating    point</p></td>
+    <td width="75" valign="top"><p>double</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%Lf</p></td>
+    <td width="151" valign="top"><p>Floating    point</p></td>
+    <td width="75" valign="top"><p>long<br>
+      double</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%lu</p></td>
+    <td width="151" valign="top"><p>Unsigned    integer</p></td>
+    <td width="75" valign="top"><p>unsigned<br>
+      int<br>
+      unsigned<br>
+      long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%lli,    %lld</p></td>
+    <td width="151" valign="top"><p>Signed    integer</p></td>
+    <td width="75" valign="top"><p>long    long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%llu</p></td>
+    <td width="151" valign="top"><p>Unsigned    integer</p></td>
+    <td width="75" valign="top"><p>unsigned <br>
+      long long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%o</p></td>
+    <td width="151" valign="top"><p>&nbsp;</p>
+      <p>Octal    representation of integer</p></td>
+    <td width="75" valign="top"><p>short<br>
+      unsigned<br>
+      short<br>
+      int<br>
+      unsigned<br>
+      int<br>
+      long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%p</p></td>
+    <td width="151" valign="top"><p>Address    of pointer to void</p></td>
+    <td width="75" valign="top"><p>void    * </p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%s</p></td>
+    <td width="151" valign="top"><p>String</p></td>
+    <td width="75" valign="top"><p>char    *</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%u</p></td>
+    <td width="151" valign="top"><p>Unsigned    integer</p></td>
+    <td width="75" valign="top"><p>unsigned<br>
+      int<br>
+      unsigned<br>
+      long</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%x    or *X</p></td>
+    <td width="151" valign="top"><p>Hexadecimal    representation of Unsigned Integer</p></td>
+    <td width="75" valign="top"><p>short<br>
+      unsigned<br>
+      short<br>
+      int<br>
+      unsigned<br>
+      int<br>
+    </p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%n</p></td>
+    <td width="151" valign="top"><p>Prints    nothing</p></td>
+    <td width="75" valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="111" valign="top"><p align="center">%%</p></td>
+    <td width="151" valign="top"><p>Prints    % character</p></td>
+    <td width="75" valign="top"><p>&nbsp;</p></td>
+  </tr>
+</table>
+<br />
+<br />
+        </div>
+		<div class="">
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+
+        <!-- /.row -->
+
+        <hr>
+	</div><!-- /.container -->
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   	<li>
+
+                        <a href="ls4tp1.html">Input & Output</a>
+                    </li>
+                    <li>
+                        <a href="ls4tp2.html">Format specifier</a>
+                    </li>
+                    <li>
+                        <a href="ls4tp3.html">scanf() & printf()</a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls4.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+
+                   <center>    <p></p>        </center>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:  http://www.codeforwin.in/2015/05/list-of-all-format-specifiers-in-c.html</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

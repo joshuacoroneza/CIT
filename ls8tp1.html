@@ -1,0 +1,311 @@
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+     <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+   <center> <h1>File Handling in C Language</h1>   </center>
+        <hr>
+
+
+
+        <div class="span9">
+<div id="body-content">
+<h3></h3>
+<p>
+A <b>file</b> represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a ready made structure.</p>
+<p>In C language, we use a structure <b>pointer of file type</b> to declare a file.</p>
+<pre class="c">
+FILE <b>*fp</b>;
+</pre>
+<p>C provides a number of functions that helps to perform basic file operations. Following are the functions,</p>
+<table class="table table-bordered table-striped">
+<tr><th>Function</th><th>description</th></tr>
+<tr><td>fopen()</td><td>create a new file or open a existing file</td></tr>
+<tr><td>fclose()</td><td>closes a file</td></tr>
+<tr><td>getc()</td><td>reads a character from a file</td></tr>
+<tr><td>putc()</td><td>writes a character to a file</td></tr>
+<tr><td>fscanf()</td><td>reads a set of data from a file</td></tr>
+<tr><td>fprintf()</td><td>writes a set of data to a file</td></tr>
+<tr><td>getw()</td><td>reads a integer from a file</td></tr>
+<tr><td>putw()</td><td>writes a integer to a file</td></tr>
+<tr><td>fseek()</td><td>set the position to desire point</td></tr>
+<tr><td>ftell()</td><td>gives current position in the file</td></tr>
+<tr><td>rewind()</td><td>set the position to the begining point</td></tr>
+</table>
+
+<hr/>
+<h4>Opening a File or Creating a File</h4>
+<p>
+The <code>fopen()</code> function is used to create a new file or to open an existing file.</p>
+<p><b>General Syntax :</b></p>
+<pre class="c">
+*fp = FILE <b>*fopen</b>(const char <i>*filename</i>, const char <i>*mode</i>);
+</pre>
+<p>Here <b>filename</b> is the name of the file to be opened and <b>mode</b> specifies the purpose of opening the file. Mode can be of following types,</p><p><b>*fp</b> is the FILE pointer (<code>FILE *fp</code>), which will hold the reference to the opened(or created) file.</p>
+<p>
+<table class="table table-bordered table-striped">
+<tr><th>mode</th><th>description</th></tr>
+<tr><td>r</td><td>opens a text file in reading mode</td></tr>
+<tr><td>w</td><td>opens or create a text file in writing mode.</td></tr>
+<tr><td>a</td><td>opens a text file in append mode</td></tr>
+<tr><td>r+</td><td>opens a text file in both reading and writing mode</td></tr>
+<tr><td>w+</td><td>opens a text file in both reading and writing mode</td></tr>
+<tr><td>a+</td><td>opens a text file in both reading and writing mode</td></tr>
+<tr><td>rb</td><td>opens a binary file in reading mode</td></tr>
+<tr><td>wb</td><td>opens or create a binary file in writing mode</td></tr>
+<tr><td>ab</td><td>opens a binary file in append mode</td></tr>
+<tr><td>rb+</td><td>opens a binary file in both reading and writing mode</td></tr>
+<tr><td>wb+</td><td>opens a binary file in both reading and writing mode</td></tr>
+<tr><td>ab+</td><td>opens a binary file in both reading and writing mode</td></tr>
+</table>
+</p>
+<hr/>
+<h4>Closing a File</h4>
+<p>
+The <code>fclose()</code> function is used to close an already opened file.</p>
+<p><b>General Syntax :</b></p>
+<pre class="c">
+int <b>fclose</b>( FILE <i>*fp</i> );
+</pre>
+<p>
+Here fclose() function closes the file and returns <b>zero</b> on success, or <b>EOF</b> if there is an error in closing the file. This <b>EOF</b> is a constant defined in the header file <b>stdio.h</b>.</p>
+<hr/>
+<h4>Input/Output operation on File</h4>
+<p>
+In the above table we have discussed about various file I/O functions to perform reading and writing on file. <code>getc()</code> and <code>putc()</code> are simplest functions used to read and write individual characters to a file.
+<pre class="c">
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+main()
+{
+ FILE *fp;
+ char ch;
+ fp = <b>fopen</b>("<i>one.txt</i>", "<i>w</i>");
+ printf("Enter data");
+ while( (ch = getchar()) != EOF) {
+    <b>putc</b>(ch,fp);
+ }
+ fclose(fp);
+ fp = <b>fopen</b>("<i>one.txt</i>", "<i>r</i>");
+
+ while( (ch = <b>getc</b>(fp)! = EOF)
+    printf("%c",ch);
+
+ fclose(fp);
+}
+</pre>
+</p>
+<hr/>
+<h4>Reading and Writing from File using fprintf() and fscanf()</h4>
+<p>
+<pre class="c">
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+struct emp
+{
+   char name[10];
+   int age;
+};
+
+void main()
+{
+   struct emp e;
+   FILE *p,*q;
+   p = <b>fopen</b>("<i>one.txt</i>", "<i>a</i>");
+   q = <b>fopen</b>("<i>one.txt</i>", "<i>r</i>");
+   printf("Enter Name and Age");
+   scanf("%s %d", e.name, &e.age);
+   <b>fprintf</b>(p,"%s %d", e.name, e.age);
+   fclose(p);
+   do
+   {
+      <b>fscanf</b>(q,"%s %d", e.name, e.age);
+      printf("%s %d", e.name, e.age);
+   }
+   while( !feof(q) );
+   getch();
+}
+</pre>
+</p>
+<p>In this program, we have create two FILE pointers and both are refering to the same file but in different modes. <b>fprintf()</b> function directly writes into the file, while <b>fscanf()</b> reads from the file, which can then be printed on console usinf standard <b>printf()</b> function.</p>
+<hr/>
+<h4>Difference between Append and Write Mode</h4>
+<p>Write (w) mode and Append (a) mode, while opening a file are almost the same. Both are used to write in a file. In both the modes, new file is created if it doesn&apos;t exists already.</p>
+<p>The only difference they have is, when you open a file in the write mode, the file is reset, resulting in deletion of any data already present in the file. While in append mode this will not happen. Append mode is used to append or add data to the existing data of file(if any). Hence, when you open a file in Append(a) mode, the cursor is positioned at the end of the present data in the file.</p>
+<hr/>
+<h4>Reading and Writing in a Binary File</h4>
+<p>A Binary file is similar to the text file, but it contains only large numerical data. The Opening modes are mentioned in the table for opening modes above.</p>
+<p><b>fread()</b> and <b>fwrite()</b> functions are used to read and write is a binary file.</p>
+<pre class="c">fwrite(data-element-to-be-written, size_of_elements,
+			number_of_elements, pointer-to-file);
+</pre>
+<p><b>fread()</b> is also used in the same way, with the same arguments like fwrite() function. Below mentioned is a simple example of writing into a binary file</p>
+<pre class="c">const char <b>*mytext</b> = "The quick brown fox jumps over the lazy dog";
+FILE *bfp= <b>fopen</b>("<i>test.txt</i>", "<i>wb</i>");
+if (bfp) {
+   <b>fwrite</b>(<i>mytext</i>, <i>sizeof(char)</i>, <i>strlen(mytext)</i>, <i>bfp</i>) ;
+   fclose(bfp) ;
+}
+</pre>
+<hr/>
+<h4>fseek(), ftell() and rewind() functions</h4>
+<ul class="content">
+<li><b>fseek()</b> - It is used to move the reading control to different positions using fseek function.</li>
+<li><b>ftell()</b> - It tells the byte location of current position of cursor in file pointer.</li>
+<li><b>rewind()</b> - It moves the control to beginning of the file.</li>
+</ul>
+<hr/>
+
+<hr/>
+
+</div>
+</div>
+
+</div>
+
+         <center>   <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls8.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                 </center>      </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+                                   <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:  http://www.studytonight.com/c/file-input-output.php</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">
+</p>
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

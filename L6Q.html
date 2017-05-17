@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: #66FF99">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">LESSON 6 QUIZ</h1>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script type="text/javascript">
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "b. &&";
+answers[1] = "c. if ( expression )";
+answers[2] = "b. You lose";
+answers[3] = "b. 2";
+answers[4] = "d.  over limit";
+answers[5] = "c. Under the limit.";
+answers[6] = "b. Over";
+answers[7] = "b.  You lose";
+answers[8] = "c. break";
+answers[9] = "a. yes";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*10);
+  form.percentage.value = score;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+
+
+<form name="quiz">
+<b>
+1. Which of the following is the boolean operator for logical-and?<br></b>
+<blockquote>
+<input type="radio" name="q1" value="a. &">a. &<br>
+<input type="radio" name="q1" value="b. &&">b. &&<br>
+<input type="radio" name="q1" value="c. |">c. |<br>
+<input type="radio" name="q1" value="d. |&">d. |&<br>
+</blockquote>
+<p><b>
+2. Which of the following shows the correct syntax for an if statement?<br></b>
+<blockquote>
+<input type="radio" name="q2" value="a. if expression">a. if expression<br>
+<input type="radio" name="q2" value="b. if { expression">b. if { expression<br>
+<input type="radio" name="q2" value="c. if ( expression )">c. if ( expression )<br>
+<input type="radio" name="q2" value="d. expression if">d. expression if<br>
+</blockquote>
+</p><b>
+3. What does the following code fragment write to the monitor?<br> <br /><br />
+int sum =  21; <br />if ( sum == 20 )
+{<br />System.out.print("You win ");<br />}<br />else<br />{<br />System.out.print("You lose  ");<br />}<br />
+System.out.println("the prize.");<br />(Notice that the program has changed from the previous question!)<br /><br /><br /></b>
+<blockquote>
+<input type="radio" name="q3" value="a. You win">a. You win<br>
+<input type="radio" name="q3" value="b. You lose">b. You lose<br>
+<input type="radio" name="q3" value="c. You win the prize.">c. You win the prize.<br>
+<input type="radio" name="q3" value="d. You lose the prize.">d. You lose the prize.<br>
+</blockquote>
+<p><b>
+4.  How many choices are possible when using a single if-else statement??<br></b>
+<blockquote>
+<input type="radio" name="q4" value="a. 1">a. 1<br>
+<input type="radio" name="q4" value="b. 2">b. 2<br>
+<input type="radio" name="q4" value="c. 3">c. 3<br>
+<input type="radio" name="q4" value="d. 4">d. 4<br>
+</blockquote>
+</p><b>
+5. What does the following code fragment write to the monitor?<br /><br /><br />
+
+int sum = 21; <br />
+if ( sum < 20 )<br />
+{            <br />
+System.out.print("Under "); <br />
+System.out.println(" Under limit.");<br />
+}          <br />
+else    <br />
+{       <br />
+
+System.out.println("Over limit.");<br />
+}       <br /><br />
+
+(Notice that the program has changed from the previous question!)<br><br /></b>
+<blockquote>
+<input type="radio" name="q5" value="a. under">a. under<br>
+<input type="radio" name="q5" value="b. over">b. over<br>
+<input type="radio" name="q5" value="c. under limit">c. under limit<br>
+<input type="radio" name="q5" value="d.  over limit">d.  over limit<br>
+</blockquote>
+<p><b>
+
+6. What does the following code fragment write to the monitor?  <br /><br />
+
+int sum = 14;<br />
+if ( sum < 20 )<br />
+{            <br />
+
+System.out.println("Under limit.");<br />
+}          <br />
+else    <br />
+{       <br />
+System.out.print("Over  "); <br />
+System.out.println("Over limit.");<br />
+}       <br /><br />
+
+(Notice that the program has changed from the previous question!)<br><br /></b>
+<blockquote>
+<input type="radio" name="q6" value="a. Under">a.  Under<br>
+<input type="radio" name="q6" value="b. Over">b.  Over<br>
+<input type="radio" name="q6" value="c. Under the limit.">c. Under the limit.<br>
+<input type="radio" name="q6" value="d. Over the limit">d. Over the limit<br>
+</blockquote>
+</p><b>
+7. What does the following code fragment write to the monitor?<br /><br />
+
+int sum = 94;<br />
+if ( sum < 20 )<br />
+{            <br />
+System.out.print("Under "); <br />
+System.out.println("Under limit.");<br />
+}          <br />
+else    <br />
+{       <br />
+System.out.print("Over  "); <br />
+
+}       <br /><br />
+
+(Notice that the program has changed from the previous question!)<br><br /></b>
+<blockquote>
+<input type="radio" name="q7" value="a. Under">a. Under<br>
+<input type="radio" name="q7" value="b. Over">b. Over<br>
+<input type="radio" name="q7" value="c. Under the limit.">c. Under the limit.<br>
+<input type="radio" name="q7" value="d. Over the limit.">d. Over the limit.<br>
+</blockquote>
+<p><b>
+8.  What does the following code fragment write to the monitor?   <br /><br />
+
+int sum =  7;                                                     <br />
+if ( sum > 20 )                                                   <br />
+{                                                                 <br />
+System.out.print("You win ");                                           <br />
+}                                                                             <br />
+else                                                               <br />
+{                                                                 <br />
+System.out.print("You lose  ");                                   <br />
+}                                                                 <br />
+                                                                  <br />
+System.out.println("the prize.");                                 <br />
+                                                                  <br />
+(Notice that the program has changed from the previous question!)<br><br /></b>
+<blockquote>
+<input type="radio" name="q8" value="a. You win">a. You win<br>
+<input type="radio" name="q8" value="b.  You lose">b.  You lose<br>
+<input type="radio" name="q8" value="c.  ou win the prize.">c.  ou win the prize.<br>
+<input type="radio" name="q8" value="d. You lose the prize.">d. You lose the prize.<br>
+</blockquote>
+</p><b>
+9. In a switch statement what must come after every case?<br></b>
+<blockquote>
+<input type="radio" name="q9" value="a. curly braces">a. curly braces<br>
+<input type="radio" name="q9" value="b. scanf">b. scanf<br>
+<input type="radio" name="q9" value="c. break">c. break<br>
+<input type="radio" name="q9" value="d. if">d. if;<br>
+</blockquote>
+<p><b>
+10. Can cases have conditions??<br></b>
+<blockquote>
+<input type="radio" name="q10" value="a. yes">a. yes<br>
+<input type="radio" name="q10" value="no">b. no<br>
+
+</blockquote>
+</p>
+<center> <p><font>
+<input type="button" value="Get score" onClick="getScore(this.form)" style="background-color: #00FF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="Clear" style="background-color: #FFCCFF"><br /><br />
+Score = <input type=text size=15 name="percentage"><br>
+
+
+</p>   </center>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="lez.html" class="btn btn-success">BACK TO LESSON MENU</a>
+             </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+                    </body>
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+   <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</html>

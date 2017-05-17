@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="ls6tp2.html">IF-ELSE&nbsp;STATEMENTS</a>
+                    </li>
+                    <li>
+                        <a href="ls6tp3.html">SWITCH&nbsp;STATEMENTS</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">IF&nbsp;STATEMENTS</h1>
+        <hr>
+
+
+
+
+
+
+
+
+<hr />
+<p>An <b>if</b> statement consists of a Boolean expression followed by one or more statements.</p>
+<h2>Syntax</h2>
+<p>The syntax of an 'if' statement in C programming language is &minus;</p>
+<pre class="result notranslate">
+if(boolean_expression) {
+   /* statement(s) will execute if the boolean expression is true */
+}
+</pre>
+<p>If the Boolean expression evaluates to <b>true</b>, then the block of code inside the 'if' statement will be executed. If the  Boolean expression evaluates to <b>false</b>, then the first set of code after the end of the 'if' statement (after the closing curly brace) will be executed.</p>
+<p>C programming language assumes any <b>non-zero</b> and <b>non-null</b> values as <b>true</b> and if it is either <b>zero</b> or <b>null</b>, then it is assumed as <b>false</b> value.</p>
+<h2>Flow Diagram</h2>
+<img src="images/if.jpg" alt="C if statement" />
+<h2>Example</h2>
+<pre class="prettyprint notranslate tryit">
+#include &lt;stdio.h&gt;
+
+int main () {
+
+   /* local variable definition */
+   int a = 10;
+
+   /* check the boolean condition using if statement */
+
+   if( a &lt; 20 ) {
+      /* if condition is true then print the following */
+      printf("a is less than 20\n" );
+   }
+
+   printf("value of a is : %d\n", a);
+
+   return 0;
+}
+</pre>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<pre class="result notranslate">
+a is less than 20;
+value of a is : 10
+</pre>
+<hr />
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="ls6.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+                                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERNCE:    https://www.tutorialspoint.com/cprogramming/if_statement_in_c.htm</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <sc

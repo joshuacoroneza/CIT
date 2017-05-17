@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: #66FF99">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">LESSON 1 QUIZ</h1><br /><br />
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "a. C Preprocessor";
+answers[1] = "b. Brian Kernighan and Dennis Ritchie";
+answers[2] = "c. .h";
+answers[3] = "d. object code";
+answers[4] = "c. machine code";
+answers[5] = "b. Header file";
+answers[6] = "a. #include";
+answers[7] = "b. #define";
+answers[8] = "c. C";
+answers[9] = "d. Interpreter";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*10);
+  form.percentage.value = score;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+
+<p>
+<form name="quiz">
+</p><b>
+1.  It is not a part of the compiler, but is a separate step in the compilation process.<br></b>
+<blockquote>
+<input type="radio" name="q1" value="a. C Preprocessor">a. C Preprocessor <br>
+<input type="radio" name="q1" value="b. Compiler">b. Compiler<br>
+<input type="radio" name="q1" value="c. The Assembler">c. The Assembler<br>
+<input type="radio" name="q1" value="d. Interpreter">d. Interpreter<br>
+</blockquote>
+<p><b>
+2. Who produced the first publicly available description of C, now known as the K&R standard in year 1978?<br></b>
+<blockquote>
+<input type="radio" name="q2" value="a. Brian Kernigh and Dennis Ritchie">a. Brian Kernigh and Dennis Ritchie<br>
+<input type="radio" name="q2" value="b. Brian Kernighan and Dennis Ritchie">b. Brian Kernighan and Dennis Ritchie<br>
+<input type="radio" name="q2" value="c. Brian Kernigh">c. Brian Kernigh<br>
+<input type="radio" name="q2" value="d. Dennis Ritchie">d. Dennis Ritchie<br>
+</blockquote>
+</p><b>
+3. What is the file extension of a header file?<br></b>
+<blockquote>
+<input type="radio" name="q3" value="a. .hd">a. .hd<br>
+<input type="radio" name="q3" value="b. .d">b. .d<br>
+<input type="radio" name="q3" value="c. .h">c. .h<br>
+<input type="radio" name="q3" value="d. ch">d. ch<br>
+</blockquote>
+<p><b>
+4. The assembler program takes each program statement in the source program and generates a corresponding bit stream or pattern. The output of the assembler program is called______?<br></b>
+<blockquote>
+<input type="radio" name="q4" value="a. compiler">a. compiler<br>
+<input type="radio" name="q4" value="b. interpreter">b. interpreter<br>
+<input type="radio" name="q4" value="c. machine code">c. machine code<br>
+<input type="radio" name="q4" value="d. object code">d. object code<br>
+</blockquote>
+</p><b>
+5. The sequence of 0’s and 1’s that constitutes the object program is sometimes called ________?<br></b>
+<blockquote>
+<input type="radio" name="q5" value="a. compiler">a. compiler<br>
+<input type="radio" name="q5" value="b. interpreter">b. interpreter<br>
+<input type="radio" name="q5" value="c. machine code">c. machine code<br>
+<input type="radio" name="q5" value="d. object code">d. object code<br>
+</blockquote>
+<p><b>
+6.  If a _____________ happens to be included twice, the compiler will process its contents twice and it will result in an error.<br></b>
+<blockquote>
+<input type="radio" name="q6" value="a. Syntax">a. Syntax<br>
+<input type="radio" name="q6" value="b. Header file">b. Header file<br>
+<input type="radio" name="q6" value="c. Preprocessor">c. Preprocessor<br>
+<input type="radio" name="q6" value="d. Compiler">d. Compiler<br>
+</blockquote>
+</p><b>
+7. Inserts a particular header from another file.<br></b>
+<blockquote>
+<input type="radio" name="q7" value="a. #include">a. #include<br>
+<input type="radio" name="q7" value="b. #define">b. #define<br>
+<input type="radio" name="q7" value="c. #undef">c. #undef<br>
+<input type="radio" name="q7" value="d. #ifdef">d. #ifdef<br>
+</blockquote>
+<p><b>
+8. Substitutes a preprocessor macro.<br></b>
+<blockquote>
+<input type="radio" name="q8" value="a. #include">a. #include<br>
+<input type="radio" name="q8" value="b. #define">b. #define<br>
+<input type="radio" name="q8" value="c. #undef">c. #undef<br>
+<input type="radio" name="q8" value="d. #ifdef">d. #ifdef<br>
+</blockquote>
+</p><b>
+9. . It is a general-purpose, procedural, imperative computer programming language developed in 1972 by Dennis M. Ritchie at the Bell Telephone Laboratories to develop the UNIX operating system.<br></b>
+<blockquote>
+<input type="radio" name="q9" value="a. Compilation">a. Compilation<br>
+<input type="radio" name="q9" value="b. Compiler">b. Compiler<br>
+<input type="radio" name="q9" value="c. C">c. C<br>
+<input type="radio" name="q9" value="d. K&R">d. K&R <br>
+</blockquote>
+<p><b>
+10. Takes Single instruction as input.<br></b>
+<blockquote>
+<input type="radio" name="q10" value="a. C Preprocessor">a. C Preprocessor <br>
+<input type="radio" name="q10" value="b. Compiler">b. Compiler<br>
+<input type="radio" name="q10" value="c. The Assembler">c. The Assembler<br>
+<input type="radio" name="q10" value="d. Interpreter">d. Interpreter<br>
+</blockquote>
+</p>
+<center> <p><font>
+<input type="button" value="Get score" onClick="getScore(this.form)" style="background-color: #00FF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="Clear" style="background-color: #FFCCFF"><br /><br />
+Score = <input type=text size=15 name="percentage"><br>  
+
+</p>
+</form> </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       </body>
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="lez.html" class="btn btn-success">BACK TO LESSON MENU</a>
+             </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+                     <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</html>

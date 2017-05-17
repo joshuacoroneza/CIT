@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="ls5tp2.html">FOR&nbsp;LOOP</a>
+                    </li>
+                    <li>
+                        <a href="ls5tp3.html">WHILE&nbsp;LOOP</a>
+                    </li>
+                    <li>
+                        <a href="ls5tp4.html">DO-WHILE&nbsp;LOOP</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">RELATIONAL&nbsp;OPERATORS</h1>
+        <hr>
+
+
+
+
+
+
+<P>
+There are six relational operators:
+<UL>
+     <LI> <B><</B> : less than </LI>
+     <LI> <B><=</B> : less than or equal to </LI>
+     <LI> <B>></B> : greater than </LI>
+     <LI> <B>>=</B> : greater than or equal to</LI>
+     <LI> <B>==</B> : equal to </LI>
+     <LI> <B>/=</B> : not equal to </LI>
+</UL>
+Here are important rules:
+<UL>
+     <LI> Each of these six relational operators takes two operands.
+          These two operands must both be <I>arithmetic</I> or both
+          be strings.  For arithmetic operands, if they are of different
+          types (<I>i.e.</I>, one <B>INTEGER</B> and the other <B>REAL</B>),
+          the <B>INTEGER</I> operand will be converted to
+          <B>REAL</B>. </LI>
+
+     <LI> The outcome of a comparison is a <B>LOGICAL</B> value.  For
+          example, <B>5 /= 3</B> is <B>.TRUE.</B> and <B>7 + 3 >= 20</B>
+          is <B>.FALSE.</B>  </LI>
+
+     <LI> All relational operators have equal priority and are
+          lower than those of
+          arithmetics operators as shown in the table below:
+<P>
+<CENTER>
+<TABLE BORDER=3>
+     <TR ALIGN=CENTER>
+          <TD> <B><I>Type</I></B> </TD>
+          <TD COLSPAN=6> <B><I>Operator</I></B> </TD>
+          <TD> <B><I>Associativity</I></B> </TD>
+     </TR>
+     <TR ALIGN=CENTER>
+          <TD ROWSPAN=3> <B>Arithmetic</B> </TD>
+          <TD COLSPAN=6>  <B>**</B> </TD>
+          <TD> right to left </TD>
+     </TR>
+     <TR ALIGN=CENTER>
+          <TD COLSPAN=3> <B>*</B> </TD>
+          <TD COLSPAN=3>  <B>/</B> </TD>
+          <TD> left to right </TD>
+     </TR>
+     <TR ALIGN=CENTER>
+          <TD COLSPAN=3> <B>+</B>  </TD>
+          <TD COLSPAN=3> <B>-</B> </TD>
+          <TD> left to right </TD>
+     </TR>
+
+     <TR ALIGN=CENTER>
+          <TD> <B>Relational</B> </TD>
+          <TD> <B><</B>   </TD>
+          <TD> <B><=</B>  </TD>
+          <TD> <B>></B>   </TD>
+          <TD> <B>>=</B>  </TD>
+          <TD> <B>==</B>  </TD>
+          <TD> <B>/=</B>  </TD>
+          <TD> none </TD>
+     </TR>
+
+</TABLE>
+</CENTER>
+<P>
+          This means that a relational operator can be evaluated only if
+          its two operands have been evaluated.  For example, in
+<BLOCKQUOTE>
+<FONT COLOR="#000000">
+<PRE>
+a + b /= c*c + d*d
+</PRE>
+</FONT>
+</BLOCKQUOTE>
+          expressions <B>a+b</B> and <B>c*c + d*d</B> are evaluated
+          <FONT COLOR = "#FF0000"> before</FONT> the relational operator
+          <B>/=</B> is evaluated.  </LI>
+
+     <LI> If you are not comfortable in writing long relational expressions,
+          use parenthesis.  Thus,
+<BLOCKQUOTE>
+<FONT COLOR="#000000">
+<PRE>
+3.0*SQRT(Total)/(Account + Sum) - Sum*Sum >= Total*GNP - b*b
+</PRE>
+</FONT>
+</BLOCKQUOTE>
+          is equivalent to the following:
+<BLOCKQUOTE>
+<FONT COLOR="#000000">
+<PRE>
+(3.0*SQRT(Total)/(Account + Sum) - Sum*Sum) >= (Total*GNP - b*b)
+</PRE>
+</FONT>
+</BLOCKQUOTE>
+
+     <LI> Although <B>a < b < c</B> is legal in mathematics, you cannot write
+          comparisons this way in Fortran.  The meaning of this expression
+          is <B>a<b</B> and <B>b<c</B>.   You should use
+          <A ><I>logical operator</I></A> to achieve
+          this.  </LI>
+</UL>
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls5.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+
+                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERNCE:&nbsp;http://www.cs.mtu.edu/~shene/COURSES/cs201/NOTES/chap03/relational.html</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+                    <p align="center" style="line-height:50px;color:white"></p>
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <sc

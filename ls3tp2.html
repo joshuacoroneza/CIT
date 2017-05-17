@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+
+                        <a href="ls3tp1.html">Data Types</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp3.html">Expressions and statements</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp4.html">Arithmetic Operators in C</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp5.html">Prefix and Postfix Operator</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">Expressions and statements</h1>
+        <hr>
+
+
+       <H2><A NAME="SECTION00023000000000000000">
+</A>
+</H2><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+An <EM>expression</EM> represents a single data item--usually  a number. The
+expression may consist of a single entity, such as a constant or variable,
+or it may consist of some combination of such entities, interconnected by
+one or more
+<EM>operators</EM>. Expressions can also represent logical
+conditions which are either true or false. However, in C, the conditions
+true and false are represented by the integer values <TT>1</TT> and <TT>0</TT>,
+respectively. Several simple expressions are given below:
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+a + b
+x = y
+t = u + v
+x &lt;= y
+++j
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+The first expression, which employs the
+<EM>addition operator</EM> (<code>+</code>), represents the sum of the values assigned to
+variables <TT>a</TT> and <TT>b</TT>. The second expression involves the <EM>assignment
+operator</EM> (<code>=</code>), and causes the value represented by <TT>y</TT> to be
+assigned to <TT>x</TT>. In the third expression, the value of the expression
+<TT>(u + v)</TT> is assigned to <TT>t</TT>. The fourth expression takes the value
+<TT>1</TT> (true) if the value of <TT>x</TT> is less than or equal to the
+value of <TT>y</TT>. Otherwise, the expression takes the value <TT>0</TT> (false).
+Here, <code>&lt;=</code> is a <EM>relational operator</EM> that compares the values
+of <TT>x</TT> and <TT>y</TT>. The final example causes the value of <TT>j</TT>
+to be increased by <TT>1</TT>. Thus, the expression is equivalent to
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+j = j + 1
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+The <EM>increment</EM> (by unity) operator <code>++</code> is called a <EM>unary</EM> operator,
+because it only possesses one operand.
+</FONT></BIG></SMALL></FONT></FONT>
+<P>
+<FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">A <EM>statement</EM> causes the computer to carry out some definite action. There
+are three different classes of statements in C: <EM>expression statements</EM>,
+<EM>compound statements</EM>, and <EM>control statements</EM>.
+</FONT></BIG></SMALL></FONT></FONT>
+<P>
+<FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">An expression statement consists of an expression followed by a semicolon. The
+execution of such a  statement causes the associated expression to be evaluated.
+For example:
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+a = 6;
+c = a + b;
+++j;
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+The first two expression statements both cause the value of the expression
+on the right of the equal sign to be assigned to the variable on the left.
+The third expression statement causes the value of <TT>j</TT> to be incremented
+by <TT>1</TT>.
+Again, there is no restriction on the length of an expression statement:
+such a statement can even be split over many lines,
+ so long as its end is signaled by a
+semicolon.
+</FONT></BIG></SMALL></FONT></FONT>
+<P>
+<FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">A compound statement consists of several individual statements enclosed within
+a pair of braces <code>{</code>&nbsp;<code>}</code>. The individual statements may themselves
+be expression statements, compound statements, or control statements. Unlike
+expression statements, compound statements do <EM>not</EM> end with semicolons.
+A typical compound statement is shown below:
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+{
+  pi = 3.141593;
+  circumference = 2. * pi * radius;
+  area = pi * radius * radius;
+}
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+This particular compound statement  consists of three expression statements, but
+acts like a single entity in the program in which it appears.
+</FONT></BIG></SMALL></FONT></FONT>
+<P>
+<FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">A <EM>symbolic constant</EM> is a name that substitutes for a sequence of
+characters. The characters may represent either a number or a string.
+When a program is compiled, each occurrence of a symbolic constant is
+replaced by its corresponding character sequence. Symbolic constants are
+usually defined at the beginning of a program, by writing
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+#define  NAME  text
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+where <code>NAME</code> represents a symbolic name, typically written in upper-case
+letters, and <code>text</code> represents the sequence of characters that is
+associated with that  name. Note that <code>text</code> does <EM>not</EM>
+end with a semicolon, since a symbolic constant definition is not a true
+C statement. In fact, during compilation,
+the resolution of symbolic names is performed
+(by the <EM>C preprocessor</EM>) before the start of true compilation.
+For instance, suppose that a C program  contains the following
+symbolic constant definition:
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+#define  PI  3.141593
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+Suppose, further, that the program contains the statement
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+area = PI * radius * radius;
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+During the compilation process, the preprocessor replaces each
+occurrence of the  symbolic constant <TT>PI</TT>  by its corresponding text. Hence,
+the above statement becomes
+</FONT></BIG></SMALL></FONT></FONT><PRE>
+area = 3.141593 * radius * radius;
+</PRE><FONT SIZE="-1"><FONT SIZE="+1"><SMALL><BIG><FONT SIZE="+1">
+Symbolic constants are particularly useful in scientific programs for
+representing constants of nature, such as the mass of an electron,
+the speed of light, <EM>etc</EM>. Since these quantities are fixed, there is
+little point in assigning  variables in which to store them.
+</FONT></BIG></SMALL></FONT></FONT>
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls3.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+
+                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:  http://farside.ph.utexas.edu/teaching/329/lectures/node11.html</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

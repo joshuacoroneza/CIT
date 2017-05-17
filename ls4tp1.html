@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+                 <p> <strong>  <h2>Basic Input & Output</h2>    </strong> </p>
+    <p>When we say <strong>Input</strong>,  it means to feed some data into a program. An input can be given in the form of  a file or from the command line. C programming provides a set of built-in  functions to read the given input and feed it to the program as per  requirement. <br>
+  When we say <strong>Output</strong>, it means to  display some data on screen, printer, or in any file. C programming provides a  set of built-in functions to output the data on the computer screen as well as  to save it in text or binary files.<br>
+  C programming language provides many of  the built-in functions to read given input and write data on screen, printer or  in any file.<br>
+  <strong>C printf() function:</strong></p>
+<ul type="disc">
+  <li>printf() function is used to print the       &ldquo;character, string, float, integer, octal and hexadecimal values&rdquo; onto the       output screen.</li>
+  <li>We use printf() function with&nbsp;%d&nbsp;format       specifier to display the value of an integer variable.</li>
+  <li>Similarly&nbsp;%c&nbsp;is       used to display character,&nbsp;%f&nbsp;for       float variable,&nbsp;%s&nbsp;for       string variable,&nbsp;%lf&nbsp;for       double and&nbsp;%x&nbsp;for       hexadecimal variable.</li>
+  <li>To generate a newline,we use &ldquo;\n&rdquo; in C       printf() statement.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul type="disc">
+  <li>C language is case sensitive.&nbsp;For       example, printf() and scanf() are different from Printf() and Scanf(). All       characters in printf() and scanf() functions must be in lower case.</li>
+</ul>
+<p>
+<div>
+  <p>#include &lt;stdio.h&gt;<br>
+    int main()<br>
+    {<br>
+    char ch = &lsquo;A&rsquo;;<br>
+    char str[20] = &ldquo;fresh2refresh.com&rdquo;;<br>
+    float flt = 10.234;<br>
+    int no = 150;<br>
+    double dbl = 20.123456;<br>
+    printf(&ldquo;Character is %c \n&rdquo;, ch);<br>
+    printf(&ldquo;String is %s \n&rdquo; , str);<br>
+    printf(&ldquo;Float value is %f \n&rdquo;, flt);<br>
+    printf(&ldquo;Integer value is %d\n&rdquo; , no);<br>
+    printf(&ldquo;Double value is %lf \n&rdquo;, dbl);<br>
+    printf(&ldquo;Octal value is %o \n&rdquo;, no);<br>
+    printf(&ldquo;Hexadecimal value is %x \n&rdquo;, no);<br>
+    return 0;<br>
+    } &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+</div>
+&nbsp;<strong>Example program for C printf()  function:</strong>
+<div>
+  <p>Character is A<br>
+    String is fresh2refresh.com<br>
+    Float value is 10.234000<br>
+    Integer value is 150<br>
+    Double value is 20.123456<br>
+    Octal value is 226<br>
+  Hexadecimal value is 96 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp; &nbsp; &nbsp; &nbsp; </p>
+</div>
+&nbsp;<strong>Output:</strong>
+<p>You can see the output with the same  data which are placed within the double quotes of printf statement in the  program except</p>
+<ul type="disc">
+  <li>%d got replaced by value of an integer       variable &nbsp;(no),</li>
+</ul>
+<ul type="disc">
+  <li>%c&nbsp;got       replaced by value of a character variable &nbsp;(ch),</li>
+</ul>
+<ul type="disc">
+  <li>%f&nbsp;got       replaced by value of a float variable &nbsp;(flt),</li>
+</ul>
+<ul type="disc">
+  <li>%lf&nbsp;got       replaced by value of a double variable &nbsp;(dbl),</li>
+</ul>
+<ul type="disc">
+  <li>%s&nbsp;got       replaced by value of a string variable &nbsp;(str),</li>
+</ul>
+<ul type="disc">
+  <li>%o&nbsp;got       replaced by a octal value corresponding to integer variable &nbsp;(no),</li>
+</ul>
+<ul type="disc">
+  <li>%x&nbsp;got       replaced by a hexadecimal value corresponding to integer variable</li>
+</ul>
+<ul type="disc">
+  <li>\n&nbsp;got       replaced by a newline.</li>
+</ul>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+
+                        <a href="ls4tp1.html">Input & Output</a>
+                    </li>
+                    <li>
+                        <a href="ls4tp2.html">Format specifier</a>
+                    </li>
+                    <li>
+                        <a href="ls4tp3.html">scanf() & printf()</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="ls4.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+
+                   <center>    <p></p>        </center>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:  https://www.tutorialspoint.com/cprogramming/cprogramming_tutorial.pdf</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

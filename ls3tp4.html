@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+
+                        <a href="ls3tp1.html">Data Types</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp2.html">Expressions and statements</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp3.html">Assignment Operators in C</a>
+                    </li>
+                     <li>
+                        <a href="ls3tp5.html">Prefix and Postfix Operator</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+         <center> <h1 align="center"> <h1>Arithmetic Operators in C</h1> </h1></center>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="clearer"></div>
+<hr />
+<p>The following table shows all the arithmetic operators supported by the C language. Assume variable <b>A</b> holds 10 and variable <b>B</b> holds 20, then &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th style="width:10%">Operator</th>
+<th style="width:55%;">Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>&plus;</td>
+<td>Adds two operands.</td>
+<td>A &plus; B = 30</td>
+</tr>
+<tr>
+<td>&minus;</td>
+<td>Subtracts second operand from the first.</td>
+<td>A &minus; B = 10</td>
+</tr>
+<tr>
+<td>&#8727;</td>
+<td>Multiplies both operands.</td>
+<td>A &#8727; B = 200</td>
+</tr>
+<tr>
+<td>&#8725;</td>
+<td>Divides numerator by de-numerator.</td>
+<td>B &#8725; A = 2</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus Operator and remainder of after an integer division.</td>
+<td>B % A = 0</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Increment operator increases the integer value by one.</td>
+<td>A++ = 11</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Decrement operator decreases the integer value by one.</td>
+<td>A-- = 9</td>
+</tr>
+</table>
+<h2>Example</h2>
+<p>Try the following example to understand all the arithmetic operators available in C &minus;</p>
+<pre class="prettyprint notranslate tryit">
+#include &lt;stdio.h&gt;
+
+main() {
+
+   int a = 21;
+   int b = 10;
+   int c ;
+
+   c = a + b;
+   printf("Line 1 - Value of c is %d\n", c );
+
+   c = a - b;
+   printf("Line 2 - Value of c is %d\n", c );
+
+   c = a * b;
+   printf("Line 3 - Value of c is %d\n", c );
+
+   c = a / b;
+   printf("Line 4 - Value of c is %d\n", c );
+
+   c = a % b;
+   printf("Line 5 - Value of c is %d\n", c );
+
+   c = a++;
+   printf("Line 6 - Value of c is %d\n", c );
+
+   c = a--;
+   printf("Line 7 - Value of c is %d\n", c );
+}
+</pre>
+<p>When you compile and execute the above program, it produces the following result &minus;</p>
+<pre class="result notranslate">
+Line 1 - Value of c is 31
+Line 2 - Value of c is 11
+Line 3 - Value of c is 210
+Line 4 - Value of c is 2
+Line 5 - Value of c is 1
+Line 6 - Value of c is 21
+Line 7 - Value of c is 22
+</pre>
+<hr />
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <a href="ls3.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE: https://www.tutorialspoint.com/cprogramming/c_arithmetic_operators.htm</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">SYMBOLIC&nbsp;CONSTANT</h1>
+        <hr>
+
+     <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+
+<p><strong>Objectives       : </strong>At the end of the  lesson students are expected to:</p>
+<ul>
+  <li>Define  symbolic constants</li>
+  <li>Explain  how DEFINE is used in C programming</li>
+  <li>Apply  the concept of DEFINE in C programming</li>
+</ul>
+<p>A <strong>symbolic constant </strong>is name that substitute for a sequence of  character that cannot be changed. The character may represent a numeric  constant, a character constant, or a string. When the program is compiled, each  occurrence of a symbolic constant is replaced by its corresponding character  sequence. They are usually defined at the beginning of the program. The symbolic  constants may then appear later in the program in place of the numeric  constants, character constants, etc., that the symbolic constants represent.<br>
+  Example<br>
+  ,a<strong>C  Program </strong>consists of the following symbolic constant definitions.<br>
+  #<strong>define </strong>PI 3.141593<br>
+  #<strong>define</strong> TRUE 1<br>
+  #<strong>define</strong> FALSE 0<br>
+  #define PI 3.141593 defines a symbolic  constant PI whose value is 3.141593. When the program is pre-processed, all  occurrences of the symbolic constant PI are replaced with the replacement text  3.141593.<br>
+  <strong>Note: </strong>The  preprocessor statements begin with a # symbol and are not end with a semicolon.  By convention, preprocessor constants are written in UPPERCASE.<br>
+  <strong>Example </strong><br>
+<div>
+  <p>#include&lt;stdio.h&gt;<br>
+    #      include&lt;conio.h&gt;<br>
+    #define TRUE 1<br>
+    #define PI      3.141593.<br>
+    void main()<br>
+    {<br>
+    float     a;<br>
+    float     b;<br>
+    float     c; <br>
+    float      d= PI;<br>
+    clrscr();<br>
+    if(TRUE)<br>
+    {<br>
+    a=100;<br>
+    b=a*10;<br>
+    c=b-a;<br>
+    }<br>
+    printf(&ldquo;\na=%f\nb=%f\nc=%f\nPI=%f&rdquo;,a,b,c,d);<br>
+    getch();<br>
+    }</p>
+  <p><br clear="ALL">
+</p></div>
+
+<br />
+<br />
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+        
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls2.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+                                   <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:  http://www.cprogrammingexpert.com/C/Tutorial/fundamentals/symbolic_constant_c_programming_language.aspx </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">
+</p>
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

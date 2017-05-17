@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+    <h2>  <strong>Array</strong></h2><hr />
+<p><strong>Objectives       :  </strong>At  the end of the lesson students are expected to:</p>
+<ul>
+  <ul>
+    <ul>
+      <ul>
+        <li>Define  arrays and structures</li>
+        <li>Differentiate  its use in C programming</li>
+        <li>Illustrate  its use in C programming</li>
+        <li>Develop  programs using arrays and structures</li>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+<p>C Array is a collection of variables belongings to the same data type.  You can store group of data of same data type in an array.</p>
+<ul type="disc">
+  <li>Array might be belonging to       any of the data types</li>
+  <li>Array size must be a       constant value.</li>
+  <li>Always, Contiguous       (adjacent) memory locations are used to store array elements in memory.</li>
+  <li>It is a best practice to       initialize an array to zero or null while declaring, if we don&rsquo;t assign       any values to array.</li>
+</ul>
+<p><strong>Example for C Arrays:</strong></p>
+<ul type="disc">
+  <li>int a[10]; &nbsp; &nbsp;       &nbsp; // integer array</li>
+  <li>char b[10]; &nbsp; //       character array &nbsp; i.e. string</li>
+</ul>
+<p><strong>Declaring Arrays</strong> <br>
+<div>
+  <p>typearrayName [ arraySize ]; </p>
+</div>
+&nbsp;To declare an array in C, a programmer  specifies the type of the elements and the number of elements required by an  array as follows:
+<div>
+  <p>double balance[10]; </p>
+</div>
+&nbsp;This is called a <em>single-dimensional </em>array.  The <strong>arraySize</strong>must be an integer constant greater than zero and <strong>type </strong>can  be any valid C data type. For example, to declare a 10-element array called <strong>balance </strong>of type double, use this statement:
+</p>
+<p>Here, <em>balance </em>is a  variable array which is sufficient to hold up to 10 double numbers.<br>
+  <strong>Initializing Arrays</strong> <br>
+  You can initialize an array in C either  one by one or using a single statement as follows: <br>
+<div>
+  <p>double      balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0}; <br clear="ALL">
+</p></div>
+<p>The number of values between braces { }  cannot be larger than the number of elements that we declare for the array  between square brackets [ ]. <br>
+  If you omit the size of the array, an  array just big enough to hold the initialization is created. Therefore, if you write: <br>
+<div>
+  <p>double balance[] = {1000.0, 2.0,      3.4, 7.0, 50.0}; <br clear="ALL">
+</p></div>
+<p>You will create exactly the same array  as you did in the previous example. Following is an example to assign a single  element of the array: <br>
+<div>
+  <p>balance[4] = 50.0; </p>
+  <p>&nbsp;</p>
+</div>
+&nbsp;&nbsp;
+</p>
+<br clear="ALL">
+<p><img width="304" height="66" src="images/f6.png" hspace="12"></p>
+<p>The above statement assigns the 5th element in the array with a  value of 50.0. All arrays have 0 as the index of their first element which is  also called the base index and the last index of an array will be total size of  the array minus 1. Shown below is the pictorial representation of the array we  discussed above.</p>
+<p><strong>Accessing Array Elements</strong> <br>
+<div>
+  <p>double salary = balance[9]; </p>
+  <p>&nbsp;</p>
+</div>
+&nbsp;An element is accessed by indexing the  array name. This is done by placing the index of the element within square  brackets after the name of the array. For example:
+</p>
+<p>The above statement will take the 10th  element from the array and assign the value to salary variable. The following  example shows how to use all the three above-mentioned concepts viz.  declaration, assignment, and accessing arrays: <br>
+<div>
+  <p>#include &lt;stdio.h&gt; <br>
+    int main () <br>
+    { <br>
+    int n[ 10 ]; /* n is an array of 10      integers */ <br>
+    inti,j; <br>
+    /* initialize elements of array n to 0 */ <br>
+    for ( i = 0; i &lt; 10; i++ ) <br>
+    {<br>
+    n[ i ] = i + 100; /* set element at      location i to i + 100 */ <br>
+    } <br>
+    /* output each array element's value */ <br>
+    for (j = 0; j &lt; 10; j++ ) <br>
+    { <br>
+    printf(&quot;Element[%d] = %d\n&quot;, j,      n[j] ); <br>
+    } <br>
+    return 0; <br>
+    } <br clear="ALL">
+</p></div>
+<p>When the above code is compiled and  executed, it produces the following result: <br>
+<div>
+  <p>Element[0] = 100<br>
+    Element[1] = 101<br>
+    Element[2] = 102<br>
+    Element[3] = 103<br>
+    Element[4] = 104<br>
+    Element[5] = 105<br>
+    Element[6] = 106<br>
+    Element[7] = 107<br>
+    Element[8] = 108<br>
+    Element[9] = 109<br clear="ALL">
+</p></div>
+<p>There are <strong>2 types of C arrays</strong>. They are,</p>
+<ol start="1" type="1">
+  <li>One dimensional array</li>
+  <li>Multi-dimensional array</li>
+  <ol start="1" type="1">
+    <li>Two&nbsp;dimensional array</li>
+    <li>Three dimensional array,        four&nbsp;dimensional array etc…</li>
+  </ol>
+</ol>
+<p><strong>1. One dimensional array in C:</strong></p>
+<ul type="disc">
+  <li>Syntax : data-type arr_name[array_size];</li>
+</ul>
+<p><strong>2. </strong><strong>Multidimensional Arrays</strong> <br>
+  C programming language allows multidimensional arrays. Here is the  general form of a multidimensional array declaration: <br>
+<div>
+  <p>type name[size1][size2]...[sizeN]; <br clear="ALL">
+</p></div>
+<p>For example, the following declaration creates a three-dimensional  integer array: <br>
+<div>
+  <p>intthreedim[5][10][4]; </p>
+</div>
+&nbsp;<strong>&nbsp;</strong>
+</p>
+<br clear="ALL">
+<br>
+<strong>Two-dimensional Arrays</strong> <br>
+The  simplest form of multidimensional array is the two-dimensional array. A  two-dimensional array is, in essence, a list of one-dimensional arrays. To  declare a two-dimensional integer array of size [x][y], you would write  something as follows: <br>
+<div>
+  <p>typearrayName [ x ][ y      ]; </p>
+</div>
+&nbsp;&nbsp; <br clear="ALL">
+<p>Where <strong>type </strong>can be any valid C  data type and <strong>arrayName</strong>will be a valid C identifier. A two-dimensional  array can be considered as a table which will have x number of rows and y  number of columns. A two-dimensional array <strong>a</strong>, which contains three rows  and four columns can be shown as follows:<br>
+  <img width="331" height="124" src="images/f7.png" hspace="12"></p>
+<p>Thus, every element in the array <strong>a </strong>is  identified by an element name of the form <strong>a[ i ][ j ]</strong>, where &lsquo;a&rsquo; is the  name of the array, and &lsquo;i' and &lsquo;j&rsquo; are the subscripts that uniquely identify  each element in &lsquo;a&rsquo;.<strong> </strong><br>
+
+</P>
+</ul>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+
+                        <a href="ls7tp1.html">array</a>
+                    </li>
+                    <li>
+                        <a href="ls7tp2.html">structure</a>
+                    </li>
+                    <li>
+                        <a href="ls7tp3.html">function</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <hr>
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="ls7.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+                   <center>    <p></p>        </center>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+
+                                                                  <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERNCE:&nbsp;https://www.tutorialspoint.com/cprogramming/cprogramming_tutorial.pdf</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <sc

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: #66FF99">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">LESSON 2 QUIZ</h1>
+        <hr>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "d. Both a & b";
+answers[1] = "c. Both a & b";
+answers[2] = "b. Symbolic constant";
+answers[3] = "a. L prefix";
+answers[4] = "a. The first one refers to a variable whose identifier is x and the second one refers to the character constant x";
+answers[5] = "c. Declares a constant a whose value will be 100";
+answers[6] = "a. 12.5664";
+answers[7] = "c. literals";
+answers[8] = "d. all of the mentioned";
+answers[9] = "c. Error";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = (score);
+  form.percentage.value = score;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+
+
+<div>
+<form name="quiz">
+<b>
+1. What is the return value of putchar()?<br></b>
+<blockquote>
+<input type="radio" name="q1" value="a. The character written">a. The character written<br>
+<input type="radio" name="q1" value="b. EOF if an error occurs">b. EOF if an error occurs<br>
+<input type="radio" name="q1" value="c. Nothing">c. Nothing<br>
+<input type="radio" name="q1" value="d. Both a & b">d. Both a & b<br>
+</blockquote>
+<p><b>
+2. Which is true?<br></b>
+<blockquote>
+<input type="radio" name="q2" value="a. The symbolic constant EOF is defined in <stdio.h>">a. The symbolic constant EOF is defined in <stdio.h><br>
+<input type="radio" name="q2" value="b. The value is -1">b. The value is -1<br>
+<input type="radio" name="q2" value="c. Both a & b">c. Both a & b<br>
+<input type="radio" name="q2" value="d. Only b">d. Only b<br>
+</blockquote>
+</p><b>
+3. A __________ is name that substitute for a sequence of character that cannot be changed. The character may represent a numeric constant, a character constant, or a string. When the program is compiled, each occurrence of a symbolic constant is replaced by its corresponding character sequence.<br></b>
+<blockquote>
+<input type="radio" name="q4" value="a. Functions">a.Functions<br>
+<input type="radio" name="q4" value="b. Symbolic constant">b. Symbolic constant<br>
+<input type="radio" name="q4" value="c. Structures">c. Structures<br>
+<input type="radio" name="q4" value="d. Constant">d. Constant<br>
+</blockquote>
+<p><b>
+4.How to declare a wide character in string literal?<br></b> </p>
+<blockquote>
+<input type="radio" name="q3" value="a. L prefix">a. L prefix<br>
+<input type="radio" name="q3" value="b. l prefix">b. l prefix<br>
+<input type="radio" name="q3" value="c. W prefix">c. W prefix<br>
+<input type="radio" name="q3" value="d. none of the above">d. none of the above<br>
+</blockquote>
+<p><b>
+
+5. The difference between x and ‘x’ is<br></b></p>
+<blockquote>
+<input type="radio" name="q5" value="a. The first one refers to a variable whose identifier is x and the second one refers to the character constant x">a. The first one refers to a variable whose identifier is x and the second one refers to the character constant x<br>
+<input type="radio" name="q5" value="b. The first one is a character constant x and second one is the string literal x ">b. The first one is a character constant x and second one is the string literal x<br>
+<input type="radio" name="q5" value="c. Both are same">c. Both are same<br>
+<input type="radio" name="q5" value="d. none of the above">d. none of the above<br>
+</blockquote>
+<p><b>
+6.  Regarding following statement which of the statements is true?
+const int a = 100;<br></b> </p>
+<blockquote>
+<input type="radio" name="q6" value="a. Declares a variable a with 100 as its initial value">a. Declares a variable a with 100 as its initial value<br>
+<input type="radio" name="q6" value="b. Declares a construction a with 100 as its initial value">b. Declares a construction a with 100 as its initial value<br>
+<input type="radio" name="q6" value="c. Declares a constant a whose value will be 100">c. Declares a constant a whose value will be 100<br>
+<input type="radio" name="q6" value="d. Constructs an integer type variable with a as identifier and 100 as value">d. Constructs an integer type variable with a as identifier and 100 as value<br>
+</blockquote>
+<p><b>
+7. What is the output of this program?<br></b> </p>
+<p>#include <iostream></p>
+  <p>  using namespace std;</p>
+  <p> #define PI 3.14159</p>
+    <p>int main ()</p>
+   <p> {</p>
+     <p>   float r = 2;</p>
+      <p>  float circle;</p>
+      <p>  circle = 2 * PI * r;</p>
+ cout << circle;<br />
+       return 0;<br />
+}          <br />
+
+
+<blockquote>
+<input type="radio" name="q7" value="a. 12.5664">a. 12.5664<br>
+<input type="radio" name="q7" value="b. 13.5664">b.13.5664<br>
+<input type="radio" name="q7" value="c. 10">c. 10<br>
+<input type="radio" name="q7" value="d. compile time error">d. compile time error<br>
+</blockquote>
+<p><b>
+8. The constants are also called as.<br></b></p>
+<blockquote>
+<input type="radio" name="q8" value="a.  const">a.  const<br>
+<input type="radio" name="q8" value="b. preprocessor">b. preprocessor<br>
+<input type="radio" name="q8" value="c. literals">c. literals<br>
+<input type="radio" name="q8" value="d. none of the above">d. none of the above<br>
+</blockquote>
+<p><b>
+9. What are the parts of the literal constants?<br></b>  </p>
+<blockquote>
+<input type="radio" name="q9" value="a. integer numerals">a. integer numerals<br>
+<input type="radio" name="q9" value="b. floating-point numerals">b. floating-point numerals<br>
+<input type="radio" name="q9" value="c. strings and boolean values">c. strings and boolean values<br>
+<input type="radio" name="q9" value="d. all of the above">d. all of the above<br>
+</blockquote>
+<p><b>
+10. What is the output of this program?<br></b>  </p>
+<p>#include <iostream></p>
+  <p>  using namespace std;</p>
+   <p>  int main()</p>
+  <p>  {	</p>
+   <p>     int  const  p = 5;</p>
+       cout << ++p;     <br />
+   <p>     return 0;</p>
+ <p>   } </p>
+
+<blockquote>
+<input type="radio" name="q10" value="a.5">a. 5 <br>
+<input type="radio" name="q10" value="b. 6">b. 6<br>
+<input type="radio" name="q10" value="c. Error">c. Error<br>
+<input type="radio" name="q10" value="d. none of the above">d. none of the above<br>
+</blockquote>
+<center> <p><font>
+<input type="button" value="Get score" onClick="getScore(this.form)" style="background-color: #00FF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="Clear" style="background-color: #FFCCFF"><br /><br />
+Score = <input type=text size=15 name="percentage"><br>   
+
+</p>   </center>
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="lez.html" class="btn btn-success">BACK TO LESSON MENU</a>
+             </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+                   </body>
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</html>

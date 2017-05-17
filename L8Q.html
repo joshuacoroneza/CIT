@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: #66FF99">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">LESSON 8 QUIZ</h1>
+        <hr>
+
+
+
+
+
+
+
+
+          <script type="text/javascript">
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "a. FILE is a keyword in C for representing files and fp is a variable of FILE type.";
+answers[1] = "a. EOF";
+answers[2] = "a. End of files is reached";
+answers[3] = "a. Only 1";
+answers[4] = "a. rewind() doesn't work for empty files";
+answers[5] = "a.  FILE*";
+answers[6] = "a. Call fopen on the file";
+answers[7] = "a. Open file and use fprintf.";
+answers[8] = "a. a";
+answers[9] = "a. Use the b flag to fopen";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*10);
+  form.percentage.value = score;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+
+
+<form name="quiz">
+<b>
+1.Which of the following true about FILE *fp<br></b>
+<blockquote>
+<input type="radio" name="q1" value="a. FILE is a keyword in C for representing files and fp is a variable of FILE type.">a. FILE is a keyword in C for representing files and fp is a variable of FILE type.<br>
+<input type="radio" name="q1" value="b. FILE is a structure and fp is a pointer to the structure of FILE type">b. FILE is a structure and fp is a pointer to the structure of FILE type<br>
+<input type="radio" name="q1" value="c. FILE is a stream">c. FILE is a stream<br>
+<input type="radio" name="q1" value="d. FILE is a buffered stream">d. FILE is a buffered stream<br>
+</blockquote>
+<p><b>
+2.Whenfopen() is not able to open a file, it returns<br></b>
+<blockquote>
+<input type="radio" name="q2" value="a. EOF">a. EOF<br>
+<input type="radio" name="q2" value="b. NULL">b. NULL<br>
+<input type="radio" name="q2" value="c. Runtime Error">c. Runtime Error<br>
+<input type="radio" name="q2" value="d. Compiler Dependent">d. Compiler Dependent<br>
+</blockquote>
+</p><b>
+3.getc() returns EOF when<br></b>
+<blockquote>
+<input type="radio" name="q3" value="a. End of files is reached">a. End of files is reached<br>
+<input type="radio" name="q3" value="b. When getc() fails to read a character">b. When getc() fails to read a character<br>
+<input type="radio" name="q3" value="c. Both of the above">c. Both of the above<br>
+<input type="radio" name="q3" value="d. None of the above">d. None of the above<br>
+</blockquote>
+<p><b>
+4. In fopen(), the open mode "wx" is sometimes preferred "w" because. <br />1) Use of wx is more efficient.<br /> 2) If w is used, old contents of file are erased and a new empty file is created. When wx is used, fopen() returns NULL if file already exists.
+<br></b>
+<blockquote>
+<input type="radio" name="q4" value="a. Only 1">a. Only 1<br>
+<input type="radio" name="q4" value="b. Only 1">b. Only 1<br>
+<input type="radio" name="q4" value="c. Both 1 and 2">c. Both 1 and 2<br>
+<input type="radio" name="q4" value="d. Neither 1 nor 2">d. Neither 1 nor 2<br>
+</blockquote>
+</p><b>
+5. fseek() should be preferred over rewind() mainly because<br></b>
+<blockquote>
+<input type="radio" name="q5" value="a. rewind() doesn't work for empty files">a. rewind() doesn't work for empty files<br>
+<input type="radio" name="q5" value="b. rewind() may fail for large files">b. rewind() may fail for large files<br>
+<input type="radio" name="q5" value="c. In rewind, there is no way to check if the operations completed successfully">c. In rewind, there is no way to check if the operations completed successfully<br>
+<input type="radio" name="q5" value="d.  All of the above">d.  All of the above<br>
+</blockquote>
+<p><b>
+6. What object do you use to represent a file in C? <br></b>
+<blockquote>
+<input type="radio" name="q6" value="a.  FILE*">a.  FILE*<br>
+<input type="radio" name="q6" value="b. fopen">b. fopen<br>
+<input type="radio" name="q6" value="c. printf">c. printf<br>
+<input type="radio" name="q6" value="d.  fprintf">d.  fprintf<br>
+</blockquote>
+</p><b>
+7. Before you can read or write to a file in C, what do you need to do?<br></b>
+<blockquote>
+<input type="radio" name="q7" value="a. Call fopen on the file">a. Call fopen on the file<br>
+<input type="radio" name="q7" value="b. Create the file">b. Create the file<br>
+<input type="radio" name="q7" value="c. Call fclose on the file">c. Call fclose on the file<br>
+<input type="radio" name="q7" value="d. Use fprintf">d. Use fprintf<br>
+</blockquote>
+<p><b>
+8. How do you write a string of text into a file?<br></b>
+<blockquote>
+<input type="radio" name="q8" value="a. Open file and use fprintf.">a. Open file and use fprintf.<br>
+<input type="radio" name="q8" value="b.  Open a file and use printf, the output will go to the file instead of the screen.">b.  Open a file and use printf, the output will go to the file instead of the screen.<br>
+<input type="radio" name="q8" value="c.  Open a file, and use fputc repeatedly.">c.  Open a file, and use fputc repeatedly.<br>
+<input type="radio" name="q8" value="d. Use fread to read data into the file.">d. Use fread to read data into the file.<br>
+</blockquote>
+</p><b>
+9. What flag do you need to pass to fopen to append to an existing file instead of recreating the file?<br></b>
+<blockquote>
+<input type="radio" name="q9" value="a. a">a. a<br>
+<input type="radio" name="q9" value="b. b">b. r<br>
+<input type="radio" name="q9" value="c. w">c. w<br>
+<input type="radio" name="q9" value="d. w+">d. w+<br>
+</blockquote>
+<p><b>
+10. How do you open a file for binary IO?<br></b>
+<blockquote>
+<input type="radio" name="q10" value="a. Use the b flag to fopen">a. Use the b flag to fopen<br>
+<input type="radio" name="q10" value="b. Files are opened for binary IO by default">b. Files are opened for binary IO by default<br>
+<input type="radio" name="q10" value="c. Use fread and fwrite">c. Use fread and fwrite<br>
+<input type="radio" name="q10" value="d. You need to use a special file type, BINARYFILE*">d. You need to use a special file type, BINARYFILE*<br>
+</blockquote>
+</p>
+<center> <p><font>
+<input type="button" value="Get score" onClick="getScore(this.form)" style="background-color: #00FF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="Clear" style="background-color: #FFCCFF"><br /><br />
+Score = <input type=text size=15 name="percentage"><br>
+
+
+
+</p>    </center>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="lez.html" class="btn btn-success">BACK TO LESSON MENU</a>
+             </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+          </body>
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</html>

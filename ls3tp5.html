@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+
+                        <a href="ls3tp1.html">Data Types</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp2.html">Expressions and statements</a>
+                    </li>
+                    <li>
+                        <a href="ls3tp3.html">Assignment Operators in C</a>
+                    </li>
+                     <li>
+                        <a href="ls3tp4.html">Arithmetic Operators in C</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+         <center><h1 align="center"> <h1 class="entry-title">Prefix and Postfix Operator</h1>    </h1>      </center>
+        <hr>
+
+
+
+<p>How does the prefix and postfix operator on expression?</p>
+<p>The operators present in prefix and postfix are</p>
+<ul>
+<li>prefix increment operator denoted by <font size="2" color="#990000"><font face="Courier New">++ </font></font></li>
+<li>prefix decrement operator denoted by <font size="2" color="#990000"><font face="Courier New">&#8212; </font></font></li>
+<li>postfix increment operator</li>
+<li>postfix decrement operator</li>
+</ul>
+<p>The difference between the two is that in the postfix notation, the operator appears after postfix-expression, whereas in the prefix notation, the operator appears before expression, for example</p>
+<blockquote>
+<p><font size="2" color="#990000"><font face="Courier New">x&#8211;; <br />
+</font></font>denote postfix-decrement operator and</p>
+<p><font size="2" color="#990000"><font face="Courier New">&#8211;x; <br />
+</font></font>denote prefix decrement operator.</p>
+</blockquote>
+<p>The prefix increment operator adds one to its operand. This incremented value is used in the expression to get the result of the expression. The prefix decrement operator is similar to the prefix increment operator, except that the operand is decremented by one and the decremented result is used in the expression to get the value of the expression.</p>
+<p>In the postfix form, the increment or decrement takes place after the value is used in expression evaluation.</p>
+<p>In prefix increment or decrement operation the increment or decrement takes place before the value is used in expression evaluation.</p>
+<p>Also precedence denotes the priority of operators. In other words if number of operators occur in a expression the priority in which the operators gets executes is decided by precedence of operators.</p>
+<p>Associativity is the order in which a operator gets executes. Prefix and postfix gets the highest precedence among the operators and the associativity of these is from right to left.&nbsp; The operator gets executed from right to left in an expression.</p>
+<p>How postfix and prefix increment and decrement operator gets evaluated</p>
+<p><strong>Program1: </strong></p>
+<blockquote>
+<p><font size="2" face="Courier New" color="#990000">main() <br />
+{ <br />
+int a=5,b; <br />
+b= ++a + 5; <br />
+printf(&quot;a=%d b=%d&quot;,a,b); <br />
+} </font></p>
+</blockquote>
+<p><strong>Program2: </strong></p>
+<blockquote>
+<p><font size="2" face="Courier New" color="#990000">main() <br />
+{ <br />
+int a=5,b; <br />
+b= a++ + 5; <br />
+printf(&quot;a=%d b=%d&quot;,a,b); <br />
+} </font></p>
+</blockquote>
+<p>In this <em>program1 </em>makes use of prefix increment operator that is <font size="2" color="#990000"><font face="Courier New">++a</font></font> so value of a is incremented and then used in expression which gives</p>
+<p><font size="2" face="Courier New" color="#990000">&nbsp;&nbsp;&nbsp; a=a+1 </font>which gives value of <font size="2" color="#990000"><font face="Courier New">a</font></font> as <font size="2" color="#990000"><font face="Courier New">6</font></font> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then b becomes <font size="2" color="#990000"><font face="Courier New">b=6+5=11 <br />
+</font></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; so the output of prgram1 is <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#990000"><font face="Courier New">a=6 b=11 </font></font></p>
+<p>In this <em>program2</em> makes use of postfix increment operator that is <font size="2" color="#990000"><font face="Courier New">a++</font></font> so value of a is used in expression with then incremented which gives</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#990000"><font face="Courier New">b = 5+5=10 <br />
+&nbsp;&nbsp;&nbsp; </font></font><font size="2" color="#990000"><font face="Courier New">a=a+1 makes value of a as 6 </font></font></p>
+<p>so the output of <em>prgram2</em> is</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="2" color="#990000"><font face="Courier New">a=6 b=10 </font></font></p>
+<p>The prefix and postfix have difference only in the way they operate and have nothing to do in terms of execution speed. In other words both prefix and postfix operate in the same speed and have no difference in this regard.</p>
+<div class="author_info">
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <a href="ls3.html" class="btn btn-success" style="background-color: #3300CC">BACK TO TOPIC LIST</a><br /><br /><br />
+                       </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                                         <nav class="navbar navbar-inverse navbar-fixed-bot" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a>REFERENCE:
+http://www.learn.geekinterview.com/programming/c/prefix-and-postfix-operator.html
+</a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

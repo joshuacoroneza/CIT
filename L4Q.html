@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CTI lessons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: #66FF99">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="index.html">CODE TO INNOVATE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+          <h1 align="center">LESSON 4 QUIZ</h1>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var numQues = 10;
+var numChoi = 4;
+var answers = new Array(10);
+answers[0] = "c. 1165";
+answers[1] = "c. BANK";
+answers[2] = "c. scanf()";
+answers[3] = "c. d";
+answers[4] = "b. 0055 034E:0055";
+answers[5] = "d. Compiler error";
+answers[6] = "a. 6789";
+answers[7] = "d. Compile error";
+answers[8] = "c. 2";
+answers[9] = "d. Compiler error";
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+
+  score = Math.round(score/numQues*10);
+  form.percentage.value = score ;
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+</script>
+
+<div>
+<form name="quiz">
+<font>
+<p><b>
+1.What will be the output of this program. <br /> <br />
+#include<stdio.h>                          <br />
+#include<conio.h>                          <br />
+void main()                                 <br />
+{                                          <br />
+int a=5,b=6,c=11;                          <br />
+clrscr();                                 <br />
+printf("%d %d %d");                       <br />
+getch();                                  <br />
+}                                         <br />
+<br></b>   </p>
+<blockquote>
+<input type="radio" name="q1" value="a. Garbage valu">a.garbage value <br>
+<input type="radio" name="q1" value="b. 5611">b. 5611<br>
+<input type="radio" name="q1" value="c. 1165">c. 1165<br>
+<input type="radio" name="q1" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<p><b>
+2. #include<stdio.h><br />
+void main()         <br />
+{                      <br />
+char *str="CQUESTIONBANK"; <br />
+clrscr();                <br />
+printf(str+9);           <br />
+getch();                 <br />
+}                        <br /><br />
+What will output when you compile and run the above code?
+<br></b> </p>
+<blockquote>
+<input type="radio" name="q2" value="a. CQESTIONBANK">a. CQESTIONBANK<br>
+<input type="radio" name="q2" value="b. CQUESTION">b. CQUESTION<br>
+<input type="radio" name="q2" value="c. BANK">c. BANK<br>
+<input type="radio" name="q2" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<p><b>
+3. It is used to read character, string, numeric data from keyboard
+<blockquote>
+<input type="radio" name="q3" value="a. printf()">a. printf()<br>
+<input type="radio" name="q3" value="b. fprint()">b. fprint()<br>
+<input type="radio" name="q3" value="c. scanf()">c. scanf()<br>
+<input type="radio" name="q3" value="d. scan">d. scan<br>
+</blockquote>
+<br> </b> </p> <p><b>
+4. #include<stdio.h><br />
+#include<conio.h>    <br />
+void main()          <br />
+{                    <br />
+short int a=5;        <br />
+clrscr();             <br />
+printf("%d"+1,a);     <br />
+getch();             <br />
+}                    <br /><br />
+
+What will output when you compile and run the above code?
+<br></b>   </p>
+<blockquote>
+<input type="radio" name="q4" value="a. 6">a. 6<br>
+<input type="radio" name="q4" value="b. 51">b. 51<br>
+<input type="radio" name="q4" value="c. d">c. d<br>
+<input type="radio" name="q4" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<b>
+5. #include<stdio.h> <br />
+void main()           <br />
+{                     <br />
+int i=85;             <br />
+clrscr();             <br />
+printf("%p %Fp",i,i);<br />
+getch();              <br />
+}                     <br /><br />
+
+What will output when you compile and run the above code?
+<br></b>
+<blockquote>
+<input type="radio" name="q5" value="a. 85 85">a. 85 85<br>
+<input type="radio" name="q5" value="b. 0055 034E:0055">b. 0055 034E:0055<br>
+<input type="radio" name="q5" value="c. 0055 FFFF:0055">c. 0055 FFFF:0055<br>
+<input type="radio" name="q5" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<p><b>
+6.  #include<stdio.h>   <br />
+static struct student    <br />
+{                         <br />
+int a;                    <br />
+    int b;                 <br />
+    int c;                  <br />
+int d;                       <br />
+}s1={6,7,8,9},s2={4,3,2,1},s3;<br />
+void main()                   <br />
+{                             <br />
+s3=s1+s2;                     <br />
+clrscr();                      <br />
+printf("%d %d %d %d",s3.a,s3.b,s3.c,s3.d);  <br />
+getch();                                   <br />
+}                                          <br /><br />
+What will output when you compile and run the above code?
+<br></b> </p>
+<blockquote>
+<input type="radio" name="q6" value="a. 6789">a. 6789<br>
+<input type="radio" name="q6" value="b. 4321">b. 4321<br>
+<input type="radio" name="q6" value="c. 10101010">c. 10101010<br>
+<input type="radio" name="q6" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<p><b>
+7. #include<stdio.h>    <br />
+extern struct student    <br />
+{                        <br />
+int a;                   <br />
+    int b;               <br />
+    int c;               <br />
+int d;                   <br />
+}s={6,7,8,9};            <br />
+                         <br />
+void main()               <br />
+{                          <br />
+clrscr();                 <br />
+printf("%d %d %d %d",s.a,s.b,s.c,s.d);   <br />
+getch();                                <br />
+}                                      <br /><br />
+
+What will output when you compile and run the above code?
+<br></b> </p>
+<blockquote>
+<input type="radio" name="q7" value="a. 6789">a. 6789<br>
+<input type="radio" name="q7" value="b. 9876">b. 9876<br>
+<input type="radio" name="q7" value="c. 0000">c. 0000<br>
+<input type="radio" name="q7" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<p><b>
+8. #include<stdio.h>      <br />
+struct student              <br />
+{                         <br />
+static int a;             <br />
+register int b;           <br />
+auto int c;               <br />
+extern int d;             <br />
+}s={6,7,8,9};             <br />
+void main()               <br />
+{                                <br />
+printf("%d %d % %d",s.a,s.b,s.c,s.d);<br />
+}                                   <br /><br />
+
+What will output when you compile and run the above code?
+.<br></b>
+<blockquote>
+<input type="radio" name="q8" value="a. 6789">a. 6789<br>
+<input type="radio" name="q8" value="b. 9876">b. 9876<br>
+<input type="radio" name="q8" value="c. 0000">c. 0000<br>
+<input type="radio" name="q8" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+</p><b>
+9. #include<stdio.h>        <br />
+struct student             <br />
+{                           <br />
+int roll;                   <br />
+int cgpa;                   <br />
+int sgpa[8];                <br />
+};                               <br />
+void main()                       <br />
+{                                <br />
+struct student s={12,8,7,2,5,9}; <br />
+int *ptr;                        <br />
+ptr=(int *)&s;                   <br />
+clrscr();                         <br />
+printf("%d",*(ptr+3));           <br />
+getch();                          <br />
+}                                 <br /><br />
+What will output when you compile and run the above code?
+<br></b>
+<blockquote>
+<input type="radio" name="q9" value="a. 8">a. 8<br>
+<input type="radio" name="q9" value="b. 7">b. 7<br>
+<input type="radio" name="q9" value="c. 2">c. 2<br>
+<input type="radio" name="q9" value="d. Compiler error">d. Compiler error <br>
+</blockquote>
+<p><b>
+10. #include<stdio.h>      <br />
+struct game                <br />
+{                           <br />
+int level;                  <br />
+int score;                   <br />
+struct player                <br />
+{                             <br />
+char *name;                   <br />
+}g2={"anil"};                <br />
+}g3={10,200};                 <br />
+void main()                  <br />
+{                             <br />
+struct game g1=g3;             <br />
+clrscr();                      <br />
+printf("%d  %d  %s",g1.level,g1.score,g1.g2.name);   <br />
+getch();                                           <br />
+}                                                 <br /><br />
+
+What will output when you compile and run the above code?
+<br></b></p>
+<blockquote>
+<input type="radio" name="q10" value="a. 10 200 anil">a. 10 200 anil <br>
+<input type="radio" name="q10" value="b. 200 10 anil">b. 200 10 anil<br>
+<input type="radio" name="q10" value="c. 10 200 null">c. 10 200 null<br>
+<input type="radio" name="q10" value="d. Compiler error">d. Compiler error<br>
+</blockquote>
+<center> <p><font>
+<input type="button" value="Get score" onClick="getScore(this.form)" style="background-color: #00FF66">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="Clear" style="background-color: #FFCCFF"><br /><br />
+Score = <input type=text size=15 name="percentage"><br>
+
+
+</p>    </center>
+</font></form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Pagination -->
+        <div class="row text-center"><br /><br />
+
+            <a href="index.html" class="btn btn-success">BACK TO HOME</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="lez.html" class="btn btn-success">BACK TO LESSON MENU</a>
+             </div>
+        <!-- /.row -->
+
+        <hr>
+                  </body>
+
+
+        <!-- Footer -->
+        <footer class="navbar navbar-inverse navbar-static-bottom">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p align="center" style="line-height:50px;color:white">CTI</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+   <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+</html>
