@@ -112,6 +112,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <icon src = "images/ctiicon.png" />
+    <icon src="images/ldpi.png" platform="android" qualifier="ldpi" />
 </widget>
 
