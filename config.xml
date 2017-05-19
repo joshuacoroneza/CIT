@@ -5,7 +5,7 @@
          CTI - Code To Innovate
     </description>
 
-    <content src="home.html" />
+    <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 
@@ -88,7 +88,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-      
+
         <icon src="images/icon.png" />
 
     </platform>
